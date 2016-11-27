@@ -1,12 +1,11 @@
 ---
-layout: career
 title: Buyer/Expeditor
 date: '2016-10-12'
 ---
 
 Onyx Renewable Partner L.P. ("Onyx") is seeking a Buyer/Expeditor to join our growing and dynamic team in our Robbinsville, New Jersey location.  The Buyer/Expeditor will be responsible for procurement of solar components, materials and services for use on Onyx solar projects.  This position shall report to the Director of Procurement.   
 
-### Responsibilities
+## Responsibilities
 
 - Interface with Engineering, Project Management and Construction to secure material for the construction of solar projects across the United States, at competitive pricing
 - Transact supply chain and procurement activity in an ERP system
@@ -22,7 +21,7 @@ Onyx Renewable Partner L.P. ("Onyx") is seeking a Buyer/Expeditor to join our g
 - Communicate and maintain a project by project expediting report with the EPC team to ensure on-time material deliveries, resolve supplier issues, concerns or other needs
 - Other duties as assigned by the Director of Procurement
 
-### Required Qualifications
+## Required Qualifications
 
 - Degree in Business, Engineering, Industrial Technology or other related field or equivalent experience
 - 3 - 5 years of experience as a buyer, assistant buyer or expeditor
@@ -38,7 +37,7 @@ Onyx Renewable Partner L.P. ("Onyx") is seeking a Buyer/Expeditor to join our g
 - Ability to work as a team player and independently
 - Enthusiastic, Energetic and Assertive
 
-### Working Conditions
+## Working Conditions
 
 - Dexterity of hands and fingers to operate a computer keyboard, mouse and other devices and objects
 - Required to stand, walk, sit, talk and hear.  Reasonable accommodations may be made to enable individuals with disabilities to perform essential functions

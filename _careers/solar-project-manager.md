@@ -4,11 +4,11 @@ title: Solar Project Manager
 date: '2016-09-22'
 ---
 
-Onyx Renewable Partners L.P. (“Onyx”), a portfolio company of Blackstone, provides flexible, creative solutions for the development, finance, construction and operation of Commercial & Industrial distributed generation and utility-scale solar as well as wind power projects in North America.
+Onyx Renewable Partners L.P. ("Onyx"), a portfolio company of Blackstone, provides flexible, creative solutions for the development, finance, construction and operation of Commercial & Industrial distributed generation and utility-scale solar as well as wind power projects in North America.
 
-Onyx is seeking Solar Project Managers to join our growing and dynamic team.  A Project Manager will be responsible for day-to-day management of Onyx C&I portfolio construction sites across North America.  Project Managers are responsible for customer relations, managing contractors, technical specifications, compliance with contractual design, project scope, and issuing remediation and deliverables while ensuring construction deadlines are met.  Project Managers will be responsible for reporting of progress to Onyx management, Quality Assurance team and other stakeholders. This critical and high-visibility position will act as the owner’s representative during physical construction and is responsible for transitioning the project to the Asset Management Team. 
+Onyx is seeking Solar Project Managers to join our growing and dynamic team.  A Project Manager will be responsible for day-to-day management of Onyx C&I portfolio construction sites across North America.  Project Managers are responsible for customer relations, managing contractors, technical specifications, compliance with contractual design, project scope, and issuing remediation and deliverables while ensuring construction deadlines are met.  Project Managers will be responsible for reporting of progress to Onyx management, Quality Assurance team and other stakeholders. This critical and high-visibility position will act as the owner's representative during physical construction and is responsible for transitioning the project to the Asset Management Team. 
 
-### Responsibilities
+## Responsibilities
 
 - Ownership of responsible projects and lead all facets of project deliverables
 - Customer interface for project matters, compliance with regulatory matters and site safety
@@ -21,15 +21,15 @@ Onyx is seeking Solar Project Managers to join our growing and dynamic team.  A
 - Responsible for milestone tracking, maintaining project costs, budget and forecasts
 - Prepare updated project forecasts, schedule and report detailed analytics to explain variances
 - Daily progress reports and on-going communication with all company functions to ensure successful project execution
-- Escalation and “actionable” plans to remediate project issues
+- Escalation and "actionable" plans to remediate project issues
 - Ensure all project turnover documentation is secured and filed in orderly manner
 
-### Reporting
+## Reporting
 
 - Reports directly to Director, Project Management
 - Office assignment is located in either Sausalito, CA or Robbinsville, NJ
 
-### Required Qualifications
+## Required Qualifications
 
 - Bachelor's Degree or equivalent work experience
 - 2-5+ years of project management or construction experience, preferably in solar
@@ -40,7 +40,7 @@ Onyx is seeking Solar Project Managers to join our growing and dynamic team.  A
 - Ability to work extended hours, as required
 - Proficient in the Microsoft Office Suite, including MS Excel, Word and PowerPoint
 
-### Working Conditions
+## Working Conditions
 
 - Travel will be required (including overnight travel) to project sites and Onyx office headquarters in New York, NY or other office locations
 - Ability to walk construction job sites and climb ladders if necessary

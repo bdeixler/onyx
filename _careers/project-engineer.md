@@ -1,12 +1,11 @@
 ---
-layout: career
 title: Project Engineer
 date '2015-12-18'
 ---
 
 Onyx Renewable Partners L.P. is seeking a Project Engineer to join our growing and dynamic team. The Project Engineer will provide assistance with the development, design, modeling, engineering, and commissioning of fixed tilt and tracking photovoltaic systems ranging in size from residential to utility.
 
-### Responsibilities
+## Responsibilities
 
 - Provide technical oversight of drawings produced internally and by 3rd party engineering firms
 - Review technical equipment submittals and providing comments
@@ -17,7 +16,7 @@ Onyx Renewable Partners L.P. is seeking a Project Engineer to join our growing 
 - Complete occasional jobsite visits as required to evaluate site conditions, electrical tie-ins, and other items that will impact system design and constructability
 - Perform additional duties as assigned and/or directed
 
-### Minimum Requirements
+## Minimum Requirements
 
 - 3 + years of experience (5 + years for Senior position) in commercial PV design and construction
 - Experience with AutoCAD and PVSYST software
@@ -29,7 +28,7 @@ Onyx Renewable Partners L.P. is seeking a Project Engineer to join our growing 
 - BSEE, BSME, or BSCE from an accredited university
 - Medium Voltage engineering experience 
 
-### Work Conditions 
+## Work Conditions 
 
 - Occasional travel may be required (including some overnight travel)
 - Ability to walk construction job sites and climb ladders is necessary

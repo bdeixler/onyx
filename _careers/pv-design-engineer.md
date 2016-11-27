@@ -1,17 +1,16 @@
 ---
-layout: career
 title: PV Design Engineer 
 subtitle: w/ Civil or Electrical Background
 date: '2016-08-30'
 ---
 
-Onyx Renewable Partners L.P. (“Onyx”), a portfolio company of Blackstone, provides flexible, creative solutions for the development, finance, construction and operation of Commercial & Industrial distributed generation and utility-scale solar as well as wind power projects in North America.
+Onyx Renewable Partners L.P. ("Onyx"), a portfolio company of Blackstone, provides flexible, creative solutions for the development, finance, construction and operation of Commercial & Industrial distributed generation and utility-scale solar as well as wind power projects in North America.
 
-### Job Description
+## Job Description
 
 The Design Engineer will be responsible for system applications, energy optimization and value engineering through various cost/build of photovoltaic facilities with system sizes ranging from residential to utility.  Applications will vary across rooftop, green-field, brown-field, landfill, and canopy solutions. The Design Engineer will work with our Engineering Operations, Estimating and Business Development teams to develop first-class renewable power generating assets.  In addition to pure development design opportunities, the Design Engineer will play a pivotal role for Onyx during due diligence of project acquisitions, including review of pre-developer project portfolios scanning for technical feasibility, fatal flaw risks, construct-ability, etc. Since the Design Engineer will actively interact with various departments, the attentive performer has the ability to hone cross-functional skills in civil, electrical, and structural engineering as well as estimating, operations, project finance, etc.  The ideal candidate will possess a superb engineering discipline and be an effective communicator with a collaborative work style.   
 
-### Responsibilities
+## Responsibilities
 
 - Use AutoCAD software to design photovoltaic from conceptual array layouts to constructable site plans
 - Immediately identify the constraints of a site to minimize project risks and opportunity cost
@@ -25,14 +24,14 @@ The Design Engineer will be responsible for system applications, energy optimiza
 - Research current and new design standards, codes, and methods of construction
 - Perform additional duties as assigned and/or directed
 
-### Reporting
+## Reporting
 
 - Reports to Director of Design
 - Reports to Robbinsville, NJ office location
 
-### Minimum Requirements
+## Minimum Requirements
 
-- 3 + years of qualifying experience and/or Bachelor’s Degree in Engineering
+- 3 + years of qualifying experience and/or Bachelor's Degree in Engineering
 - Interest in the renewable energy industry, and applying new technologies to widely varying site conditions throughout the U.S.
 - Knowledge of electrical principles and PV design concepts
 - Proficiency with CAD, MS Excel, and MS Word software
@@ -42,7 +41,7 @@ The Design Engineer will be responsible for system applications, energy optimiza
 - Regular, reliable and predictable attendance
 - Must be detail and results-oriented with an ability to work in a cross-functional, fast paced, and constantly evolving environment as well as extended hours, as required
 
-### Preferred Qualifications
+## Preferred Qualifications
 
 - BSEE, BSME, or BSCE from an accredited university
 - Solar photovoltaic Utility Interactive design experience
@@ -51,7 +50,7 @@ The Design Engineer will be responsible for system applications, energy optimiza
 - Strong knowledge of wide range of industry products and technologies
 - Experience with obtaining special permits, site plan approvals, zoning exemptions
 
-### Working Conditions
+## Working Conditions
 
 - Travel may be required (including overnight travel) to project sites and Onyx office headquarters in New York, NY
 - Ability to walk construction job sites and climb ladders if necessary

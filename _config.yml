@@ -21,10 +21,21 @@ url: "https://dawaltconley.github.io"
 twitter_username:
 github_username:
 collections:
-    press:
+    news:
         output: true
     careers:
         output: true
+defaults:
+  - scope:
+        path: "_news"
+    values:
+        layout: "news"
+        permalink: "/news/:date/:title"
+  - scope:
+        path: "_careers"
+    values:
+        layout: "careers"
+        permalink: "/careers/:title"
 
 # Build settings
 markdown: kramdown
