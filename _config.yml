@@ -34,7 +34,7 @@ defaults:
   - scope:
         path: "_careers"
     values:
-        layout: "careers"
+        layout: "job"
         permalink: "/careers/:title"
 
 # Build settings

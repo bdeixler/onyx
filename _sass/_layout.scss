@@ -175,7 +175,7 @@
     font-size: 20px;
 }
 
-.post-list {
+.news-list {
     margin-left: 0;
     list-style: none;
 
@@ -184,12 +184,12 @@
     }
 }
 
-.post-meta {
+.news-meta {
     font-size: $small-font-size;
     color: $grey-color;
 }
 
-.post-link {
+.news-link {
     display: block;
     font-size: 24px;
 }
@@ -197,13 +197,13 @@
 
 
 /**
- * Posts
+ * News
  */
-.post-header {
+.news-header {
     margin-bottom: $spacing-unit;
 }
 
-.post-title {
+.news-title {
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
@@ -213,7 +213,54 @@
     }
 }
 
-.post-content {
+.news-content {
+    margin-bottom: $spacing-unit;
+
+    h2 {
+        font-size: 32px;
+
+        @include media-query($on-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+}
+
+
+
+/**
+ * Jobs
+ */
+.job-header {
+    margin-bottom: $spacing-unit;
+}
+
+.job-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.job-content {
     margin-bottom: $spacing-unit;
 
     h2 {

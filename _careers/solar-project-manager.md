@@ -1,5 +1,4 @@
 ---
-layout: careers
 title: Solar Project Manager
 date: '2016-09-22'
 ---
