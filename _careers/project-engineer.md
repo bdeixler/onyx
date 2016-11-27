@@ -1,6 +1,6 @@
 ---
 title: Project Engineer
-date '2015-12-18'
+date: '2015-12-18'
 ---
 
 Onyx Renewable Partners L.P. is seeking a Project Engineer to join our growing and dynamic team. The Project Engineer will provide assistance with the development, design, modeling, engineering, and commissioning of fixed tilt and tracking photovoltaic systems ranging in size from residential to utility.

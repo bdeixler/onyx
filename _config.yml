@@ -30,7 +30,7 @@ defaults:
         path: "_news"
     values:
         layout: "news"
-        permalink: "/news/:date/:title"
+        permalink: "/news/:year/:month/:day/:title"
   - scope:
         path: "_careers"
     values:
