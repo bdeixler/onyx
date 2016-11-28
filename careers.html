@@ -1,24 +1,25 @@
 ---
-layout: default
-title: Careers
+layout: page
+title: Onyx Careers
+menu-title: Careers
 ---
 
-<div class="home">
+{% capture join_our_team %}{% include join-our-team.md %}{% endcapture %}
+{{ join_our_team | markdownify }}
 
-  <h1 class="page-heading">Onyx Careers</h1>
+<h2>Open Positions</h2>
 
-  <ul class="job-list">
-    {% for job in site.careers %}
-      <li>
-        <span class="job-meta">{{ job.date | date: "%b %-d, %Y" }}</span>
+<ul class="job-list">
+    {% assign sorted_jobs = site.careers | sort: 'date' | reverse %}
+    {% for job in sorted_jobs %}
+        <li>
+            <span class="job-meta">{{ job.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="job-link" href="{{ job.url | prepend: site.baseurl }}">{{ job.title }}</a>
-        </h2>
-      </li>
+            <h2>
+                <a class="job-link" href="{{ job.url | prepend: site.baseurl }}">{{ job.title }}</a>
+            </h2>
+        </li>
     {% endfor %}
-  </ul>
+</ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>

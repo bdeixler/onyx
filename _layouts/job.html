@@ -3,13 +3,22 @@ layout: default
 ---
 <article class="job" itemscope itemtype="http://schema.org/jobArticle">
 
-  <header class="job-header">
-    <h1 class="job-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="job-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
+    <header class="job-header">
+        <h1 class="job-title" itemprop="name headline">{{ page.title }}</h1>
+        <p class="job-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+            {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
+        </p>
+    </header>
 
-  <div class="job-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+    <div class="job-content" itemprop="articleBody">
+        {{ content }}
+    </div>
+
+    {% capture eeo_statement %}{% include eeo-statement.md %}{% endcapture %}
+    {{ eeo_statement | markdownify }}
+
+    {% capture join_our_team %}{% include join-our-team.md %}{% endcapture %}
+    {{ join_our_team | markdownify }}
 
 </article>

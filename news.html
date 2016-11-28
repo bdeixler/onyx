@@ -1,0 +1,20 @@
+---
+layout: page
+title: Onyx in the News
+menu-title: News
+---
+
+<ul class="news-list">
+    {% assign sorted_news = site.news | sort: 'date' | reverse %}
+    {% for news in sorted_news %}
+        <li>
+            <span class="news-meta">{{ news.date | date: "%b %-d, %Y" }}</span>
+
+            <h2>
+                <a class="news-link" href="{{ news.url | prepend: site.baseurl }}">{{ news.title }}</a>
+            </h2>
+        </li>
+    {% endfor %}
+</ul>
+
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
