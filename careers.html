@@ -4,9 +4,6 @@ title: Onyx Careers
 menu-title: Careers
 ---
 
-{% capture join_our_team %}{% include join-our-team.md %}{% endcapture %}
-{{ join_our_team | markdownify }}
-
 <h2>Open Positions</h2>
 
 <ul class="job-list">
@@ -15,11 +12,14 @@ menu-title: Careers
         <li>
             <span class="job-meta">{{ job.date | date: "%b %-d, %Y" }}</span>
 
-            <h2>
+            <h3>
                 <a class="job-link" href="{{ job.url | prepend: site.baseurl }}">{{ job.title }}</a>
-            </h2>
+            </h3>
         </li>
     {% endfor %}
 </ul>
 
 <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+{% capture join_our_team %}{% include join-our-team.md %}{% endcapture %}
+{{ join_our_team | markdownify }}
