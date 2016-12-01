@@ -37,5 +37,74 @@ defaults:
         layout: "job"
         permalink: "/careers/:title"
 
+prose:
+    ignore:
+        - "_config.yml"
+        - "_layouts"
+        - "_sass"
+        - "css"
+        - "images"
+        - "feed.xml"
+        - "README.md"
+        - ".gitignore"
+    siteurl: "http://dawaltconley.github.io/onyx" # to be changed
+    media: "images"
+    metadata:
+        _news:
+            - name: "date"
+              field:
+                  element: "text"
+                  label: "Date"
+                  value: "CURRENT_DATETIME"
+                  placeholder: "YYYY-MM-DD"
+            - name: "about"
+              field:
+                  element: "multiselect"
+                  label: "About"
+                  help: >
+                      Includes background info for a 
+                      company mentioned in the article
+                  options:
+                      - name: "test 1"
+                        value: "test 1"
+                      - name: "test 2"
+                        value: "test 2"
+                  alterable: "true"
+        _careers:
+            - name: "date"
+              field:
+                  element: "text"
+                  label: "Date"
+                  value: "CURRENT_DATETIME"
+                  placeholder: "YYYY-MM-DD"
+            - name: "description"
+              field:
+                  element: "textarea"
+                  label: "Job Description"
+            - name: "responsibilities"
+              field:
+                  element: "textarea"
+                  label: "Responsibilities"
+                  help: "For a list, begin each new line with '- '"
+                  placeholder: "- "
+            - name: "reporting"
+              field:
+                  element: "textarea"
+                  label: "Reporting"
+                  placeholder: "- <br>- <br>- <br>- <br>- "
+            - name: "qualifications"
+              field:
+                  element: "textarea"
+                  label: "Minimum Qualifications"
+                  placeholder: "- "
+            - name: "conditions"
+              field:
+                  element: "textarea"
+                  label: "Working Conditions"
+                  help: >
+                      ADA compliance and EEO statement 
+                      will be automatically included.
+                  placeholder: "- "
+
 # Build settings
 markdown: kramdown
