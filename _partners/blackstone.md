@@ -1,5 +1,6 @@
-
-## About Blackstone
+---
+title: Blackstone
+---
 
 Blackstone Energy Partners is Blackstone's energy-focused private equity business, with a successful record built on Blackstone's industry expertise and partnerships with exceptional management teams. Blackstone has invested over $8 billion of equity globally across a broad range of sectors within the energy industry.
 

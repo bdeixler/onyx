@@ -25,6 +25,8 @@ collections:
         output: true
     careers:
         output: true
+    partners:
+        output: false
 defaults:
   - scope:
         path: "_news"
@@ -48,9 +50,14 @@ prose:
         - "README.md"
         - ".gitignore"
     siteurl: "http://dawaltconley.github.io/onyx" # to be changed
-    media: "images"
+    media: "headshots"
     metadata:
         _news:
+            - name: "title"
+              field:
+                  element: "text"
+                  label: "Title"
+                  placeholder: "Untitled"
             - name: "date"
               field:
                   element: "text"
@@ -69,14 +76,16 @@ prose:
                         value: "test 1"
                       - name: "test 2"
                         value: "test 2"
-                  alterable: "true"
         _careers:
-            - name: "date"
+            - name: "title"
               field:
                   element: "text"
-                  label: "Date"
+                  label: "Title"
+                  placeholder: "Job Title"
+            - name: "date"
+              field:
+                  element: "hidden"
                   value: "CURRENT_DATETIME"
-                  placeholder: "YYYY-MM-DD"
             - name: "description"
               field:
                   element: "textarea"
@@ -86,17 +95,14 @@ prose:
                   element: "textarea"
                   label: "Responsibilities"
                   help: "For a list, begin each new line with '- '"
-                  placeholder: "- "
             - name: "reporting"
               field:
                   element: "textarea"
                   label: "Reporting"
-                  placeholder: "- <br>- <br>- <br>- <br>- "
             - name: "qualifications"
               field:
                   element: "textarea"
                   label: "Minimum Qualifications"
-                  placeholder: "- "
             - name: "conditions"
               field:
                   element: "textarea"
@@ -104,7 +110,13 @@ prose:
                   help: >
                       ADA compliance and EEO statement 
                       will be automatically included.
-                  placeholder: "- "
+        _partners:
+            - name: "title"
+              field:
+                  element: "text"
+                  label: "Title"
+                  placeholder: "Partner Name"
+
 
 # Build settings
 markdown: kramdown

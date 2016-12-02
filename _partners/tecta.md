@@ -1,3 +1,5 @@
-## About Tecta America 
+---
+title: Tecta America 
+---
 
 Tecta America is the nation’s premier commercial roofing contractor with 50+ operations located from coast to coast. Our unyielding commitment to quality, expertise and professionalism is what makes us the industry leader. Installations of all types, repairs, emergency response, sustainability options and more—we offer the responsiveness of a local roofing contractor backed by the resources and stability you need from a national provider of commercial roofing solutions. For more information, visit the Tecta America website at [www.tectaamerica.com](http://www.tectaamerica.com/). 
