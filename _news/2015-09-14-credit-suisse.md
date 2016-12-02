@@ -2,8 +2,8 @@
 title: Onyx Renewable Partners Announces Partnership with Credit Suisse to Invest over $300 Million in C&I Solar Projects
 date: '2015-09-14'
 about:
-  - onyx
-  - blackstone
+  - "/partners/onyx"
+  - "/partners/blackstone"
 ---
 
 ## Onyx Expands Presence In Growing Renewable Energy Markets

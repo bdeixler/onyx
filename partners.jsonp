@@ -1,0 +1,10 @@
+---
+---
+callback([
+    {% for partner in site.partners | sort: title %}
+        {
+            "name": "{{partner.title | replace:'"','\"'}}",
+            "value": "{{ partner.id }}"
+        } {% unless forloop.last %},{% endunless%}
+    {% endfor %}
+])

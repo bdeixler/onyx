@@ -71,11 +71,8 @@ prose:
                   help: >
                       Includes background info for a 
                       company mentioned in the article
-                  options:
-                      - name: "test 1"
-                        value: "test 1"
-                      - name: "test 2"
-                        value: "test 2"
+                  options: "http://dawaltconley.github.io/onyx/partners.jsonp"
+                    # needs to be updated when site is moved
         _careers:
             - name: "title"
               field:

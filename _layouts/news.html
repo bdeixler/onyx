@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <article class="news" itemscope itemtype="http://schema.org/NewsArticle">
 
     <header class="news-header">
@@ -15,10 +16,15 @@ layout: default
         {{ content }}
     </div>
 
-    {% for company in page.about %}
-        {% assign file_path = company | prepend: "_about/" | append: ".md" %}
-        {% capture blurb %}{% include {{ file_path }} %}{% endcapture %}
-        {{ blurb | markdownify }}
+    {% for about in page.about %}
+        {% for partner in site.partners %}
+            {% if partner.id == about %}
+                <h2>About {{ partner.title }}</h2>
+                <div class="about-blurb">
+                    {{ partner.content | markdownify }}
+                </div>
+            {% endif %}
+        {% endfor %}
     {% endfor %}
 
 </article>

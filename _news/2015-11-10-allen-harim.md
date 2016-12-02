@@ -3,8 +3,8 @@ title: Allen Harim to Install Large Solar Project at Harbeson Plant
 subtitle: Will Reduce Carbon Footprint and Help Meet Environmental Sustainability Goals
 date: '2015-11-10'
 about:
-  - allen-harim
-  - onyx
+  - "/partners/allen-harim"
+  - "/partners/onyx"
 ---
 
 Allen Harim, a leading producer and processor of chicken on Delmarva, broke ground on a multi-million dollar solar project Monday on a six-acre parcel of land near its Harbeson, Del., processing facility.  
