@@ -1,0 +1,1 @@
+The information contained in this job description is for compliance with the American with Disabilities Act (ADA) and is not an exhaustive list of duties performed by this position.  Additional duties may be assigned by the Supervisor or his/her designee.

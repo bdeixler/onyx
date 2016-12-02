@@ -11,9 +11,40 @@ layout: default
         </p>
     </header>
 
+    {% capture onyx_summary %}{% include onyx-summary.md %}{% endcapture %}
+    {{ onyx_summary | markdownify }}
+
     <div class="job-content" itemprop="articleBody">
-        {{ content }}
+        {% if page.description %}
+            <h2>Job Description</h2>
+            {{ page.description | markdownify }}
+        {% endif %}
+        {% if page.responsibilities %}
+            <h2>Responsibilities</h2>
+            {{ page.responsibilities | markdownify }}
+        {% endif %}
+        {% if page.reporting %}
+            <h2>Reporting</h2>
+            {{ page.reporting | markdownify }}
+        {% endif %}
+        {% if page.requirements %}
+            <h2>Minimum Requirements</h2>
+            {{ page.requirements | markdownify }}
+        {% endif %}
+        {% if page.preferred %}
+            <h2>Preferred Qualifications</h2>
+            {{ page.preferred | markdownify }}
+        {% endif %}
+        {% if page.conditions %}
+            <h2>Working Conditions</h2>
+            {{ page.conditions | markdownify }}
+        {% endif %}
     </div>
+
+    {% if page.ada %}
+        {% capture ada_compliance %}{% include ada-compliance.md %}{% endcapture %}
+        {{ ada_compliance | markdownify }}
+    {% endif %}
 
     {% capture eeo_statement %}{% include eeo-statement.md %}{% endcapture %}
     {{ eeo_statement | markdownify }}

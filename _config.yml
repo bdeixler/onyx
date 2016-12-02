@@ -57,7 +57,6 @@ prose:
               field:
                   element: "text"
                   label: "Title"
-                  placeholder: "Untitled"
             - name: "date"
               field:
                   element: "text"
@@ -78,7 +77,7 @@ prose:
               field:
                   element: "text"
                   label: "Title"
-                  placeholder: "Job Title"
+                  value: "Job Title"
             - name: "date"
               field:
                   element: "hidden"
@@ -87,6 +86,7 @@ prose:
               field:
                   element: "textarea"
                   label: "Job Description"
+                  help: "All fields are optional."
             - name: "responsibilities"
               field:
                   element: "textarea"
@@ -96,23 +96,32 @@ prose:
               field:
                   element: "textarea"
                   label: "Reporting"
-            - name: "qualifications"
+            - name: "requirements"
               field:
                   element: "textarea"
-                  label: "Minimum Qualifications"
+                  label: "Minimum Requirements"
+            - name: "preferred"
+              field:
+                  element: "textarea"
+                  label: "Preferred Qualifications"
             - name: "conditions"
               field:
                   element: "textarea"
                   label: "Working Conditions"
+            - name: "ada"
+              field:
+                  element: "checkbox"
+                  label: "ADA Compliant"
                   help: >
-                      ADA compliance and EEO statement 
+                      EEO statement 
                       will be automatically included.
+                  value: true
         _partners:
             - name: "title"
               field:
                   element: "text"
                   label: "Title"
-                  placeholder: "Partner Name"
+                  value: "Partner Name"
 
 
 # Build settings
