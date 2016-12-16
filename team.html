@@ -1,0 +1,18 @@
+---
+layout: page
+title: Our Team
+menu-title: Our Team
+---
+
+<ul class="members-list">
+    {% for member_name in site.data.team %}
+        {% for member in site.team %}
+            {% if member.name == member_name %}
+                <li>
+                    <h2>{{ member.name }}, {{ member.title }}</h2>
+                    <div>{{ member.content }}</div>
+                </li>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</ul>

@@ -25,6 +25,8 @@ collections:
         output: true
     careers:
         output: true
+    team:
+        output: false
     partners:
         output: false
 defaults:
@@ -45,7 +47,6 @@ prose:
         - "_layouts"
         - "_sass"
         - "css"
-        - "images"
         - "feed.xml"
         - "README.md"
         - ".gitignore"
@@ -116,6 +117,16 @@ prose:
                       EEO statement 
                       will be automatically included.
                   value: true
+        _team:
+            - name: "name"
+              field:
+                  element: "text"
+                  label: "Title"
+                  value: "Name"
+            - name: "title"
+              field:
+                  element: "text"
+                  label: "Job Title"
         _partners:
             - name: "title"
               field:

@@ -271,9 +271,9 @@
 }
 
 /**
- * News
+ * News, Jobs, and Team
  */
-.news-list {
+.news-list, .jobs-list, .members-list {
     margin-left: 0;
     list-style: none;
 
@@ -282,21 +282,21 @@
     }
 }
 
-.news-meta {
+.news-meta, .job-meta {
     font-size: $small-font-size;
     color: $grey-color;
 }
 
-.news-link {
+.news-link, .job-link {
     display: block;
     font-size: 24px;
 }
 
-.news-header {
+.news-header, .job-header {
     margin-bottom: $spacing-unit;
 }
 
-.news-title {
+.news-title, .job-title {
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
@@ -306,72 +306,7 @@
     }
 }
 
-.news-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
-}
-
-
-
-/**
- * Jobs
- */
-.job-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
-    }
-}
-
-.job-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-}
-
-.job-link {
-    display: block;
-    font-size: 24px;
-}
-.job-header {
-    margin-bottom: $spacing-unit;
-}
-
-.job-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
-}
-
-.job-content {
+.news-content, .job-content {
     margin-bottom: $spacing-unit;
 
     h2 {
