@@ -9,8 +9,11 @@ menu-title: Our Team
         {% for member in site.team %}
             {% if member.name == member_name %}
                 <li>
-                    <h2>{{ member.name }}, {{ member.title }}</h2>
-                    <div>{{ member.content }}</div>
+                    <h2>{{ member.name }}, {{ member.job }}</h2>
+                    <div>
+                        <img class="headshots" src="{{ member.image | prepend: site.baseurl }}" alt="">
+                        {{ member.content }}
+                    </div>
                 </li>
             {% endif %}
         {% endfor %}

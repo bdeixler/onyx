@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Onyx Renewable Partners
 email: info@onyxrenewables.com
-description: Investments in Sustainable Solutions
+description: Investing in Sustainable Solutions
 baseurl: "/onyx"
 url: "https://dawaltconley.github.io"
 twitter_username:
@@ -47,11 +47,12 @@ prose:
         - "_layouts"
         - "_sass"
         - "css"
+        - "images"
         - "feed.xml"
         - "README.md"
         - ".gitignore"
     siteurl: "http://dawaltconley.github.io/onyx" # to be changed
-    media: "headshots"
+    media: "images/headshots"
     metadata:
         _news:
             - name: "title"
@@ -78,7 +79,7 @@ prose:
               field:
                   element: "text"
                   label: "Title"
-                  value: "Job Title"
+                  placeholder: "Job Title"
             - name: "date"
               field:
                   element: "hidden"
@@ -121,18 +122,30 @@ prose:
             - name: "name"
               field:
                   element: "text"
-                  label: "Title"
-                  value: "Name"
-            - name: "title"
+                  label: "Name"
+            - name: "job"
               field:
                   element: "text"
                   label: "Job Title"
+            - name: "image"
+              field:
+                  element: "multiselect"
+                  label: "Headshot"
+                  help: >
+                      To upload a new image, use the 
+                      'insert image' button in the text 
+                      editor. You can then delete the 
+                      url from the text file and select 
+                      the image from the dropdown menu 
+                      here.
+                  options: "http://dawaltconley.github.io/onyx/headshots.jsonp"
+                    # needs to be updated when site is moved
         _partners:
             - name: "title"
               field:
                   element: "text"
                   label: "Title"
-                  value: "Partner Name"
+                  placeholder: "Partner Name"
 
 
 # Build settings
