@@ -18,7 +18,7 @@ $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
-$splash-image: url({{ site.baseurl | append: '/images/backgrounds/vector-black.jpeg' }});
+$splash-image:     url({{ site.baseurl | append: '/images/backgrounds/vector-black.jpeg' }});
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -29,8 +29,6 @@ $content-width:    800px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
-
-
 
 // Use media queries like this:
 // @include media-query($on-palm) {

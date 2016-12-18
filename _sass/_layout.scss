@@ -211,8 +211,9 @@
 
 #splash {
     width: 100%;
-    margin: (-$spacing-unit) (-$spacing-unit) 0;
-    padding: $spacing-unit $spacing-unit 0;
+    height: calc(100vh - 56px - #{$spacing-unit}); // could also omit spacing unit here and in margins; make div relative and move it up by one spacing unit. or remove spacing unit from margin of header (if thats where it exists)
+    margin: (-$spacing-unit) calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / -2) 0; //when the screen size gets to be less than $content-width, margin becoms positive,
+    padding: $spacing-unit calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / 2) 0;    //and the padding negative, causes problems
     overflow: hidden;
     background-image: $splash-image;
     background-position: center center;
@@ -221,6 +222,11 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+
+    @include media-query($on-laptop) {
+        margin: (-$spacing-unit) calc((100vw - (#{$content-width} - #{$spacing-unit})) / -2) 0;
+        padding: $spacing-unit calc((100vw - (#{$content-width} - #{$spacing-unit})) / 2) 0;
+    }
 }
 
 .site-title {
