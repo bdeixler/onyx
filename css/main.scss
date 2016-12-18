@@ -18,7 +18,7 @@ $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
-$splash-image: url({{ site.baseurl | append: '/images/solar-sky.jpg' }});
+$splash-image: url({{ site.baseurl | append: '/images/backgrounds/vector-black.jpeg' }});
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);

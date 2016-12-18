@@ -1,8 +1,3 @@
-## Our Partnership with Blackstone
+In October 2014, Blackstone announced it would back a highly experienced management team and created Onyx Renewable Partners, a company capitalized and owned by funds managed by Blackstone on behalf of its private equity limited partners. Blackstone is a financial powerhouse that brings a unique perspective from long experience backing power development teams. Onyx is Blackstone's 9th portfolio management team and 3rd management team focused on power.
 
-Lorem ipsum mauris egestas suspendisse vitae blandit, aliquam gravida lorem 
-suscipit aptent at tellus, amet volutpat odio tempus conubia aenean ullamcorper 
-sapien neque semper purus porta aliquam, cras sapien porta donec platea nisl, 
-facilisis pulvinar mauris sodales semper suscipit odio cubilia lobortis ante 
-nulla eleifend fusce, euismod quis duis libero justo ut, mi donec vehicula quis 
-faucibus.
+Read more about [our partnership with Blackstone].

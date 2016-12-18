@@ -3,59 +3,76 @@ layout: default
 ---
 <article>
 
-{% capture gibberish %}{% include gibberish.md %}{% endcapture %}
+    {% capture gibberish %}{% include gibberish.md %}{% endcapture %}
+    {% capture who %}{% include _home/who-we-are.md %}{% endcapture %}
+    {% capture what %}{% include _home/what-we-do.md %}{% endcapture %}
+    {% capture how %}{% include _home/how-we-do-it.md %}{% endcapture %}
+    {% capture why %}{% include _home/green-pitch.md %}{% endcapture %}
+    {% capture blackstone %}{% include _home/blackstone.md %}{% endcapture %}
 
-<div id="splash">
+    <div id="splash">
 
-<h1 class="site-title">{{ site.title }}</h1>
+        <h1 class="site-title">{{ site.title }}</h1>
 
-<p class="site-description">{{ site.description }}</p>
+        <p class="site-description">{{ site.description }}</p>
 
-<nav id="home-nav">
-    <a class="what-we-do" href="#what-we-do">
-        <img src="{{ site.baseurl }}/images/what-we-do.png" alt="">
-        What we do
+        <nav id="home-nav">
+            <a class="who-we-are" href="#who-we-are">
+                <img src="{{ site.baseurl }}/images/icons/who-we-are-inverted.png" alt="">
+                Who we are
+            </a>
+            <a class="what-we-do" href="#what-we-do">
+                <img src="{{ site.baseurl }}/images/icons/what-we-do-inverted.png" alt="">
+                What we do
+            </a>
+            <a class="how-we-do-it" href="#how-we-do-it">
+                <img src="{{ site.baseurl }}/images/icons/how-we-do-it-inverted.png" alt="">
+                How we do it
+            </a>
+            <a class="why-we-do-it" href="#why-we-do-it">
+                <img src="{{ site.baseurl }}/images/icons/why-we-do-it-inverted.png" alt="">
+                Why we do it
+            </a>
+        </nav>
+
+    </div>
+
+    <a name="who-we-are">
+        <h2>Who we are</h2>
     </a>
-    <a class="how-we-do-it" href="#how-we-do-it">
-        <img src="{{ site.baseurl }}/images/how-we-do-it.png" alt="">
-        How we do it
+
+    {{ who | markdownify }}
+
+    <h3>Our Partnership with Blackstone</h2>
+
+    {{ blackstone | markdownify }}
+
+    <a name="what-we-do">   
+        <h2>What we do</h2>
     </a>
-    <a class="who-we-are" href="#who-we-are">
-        <img src="{{ site.baseurl }}/images/who-we-are.png" alt="">
-        Who we are
+
+    {{ what | markdownify }}
+
+    <!--
+        <h3>Our goals</h3>
+        <ol>
+            <li><span class="goal">Establish</span> sustainable, mutually beneficial relationships</li>
+            <li><span class="goal">Achieve</span> the most economical costs for services</li>
+            <li><span class="goal">Provide</span> great quality, service, and expertise to our clients</li>
+            <li><span class="goal">Protect</span> the environment</li>
+        </ol>
+    -->
+
+    <a name="how-we-do-it">
+        <h2>How we do it</h2>
     </a>
-</nav>
 
-</div>
+    {{ how | markdownify }}
 
-<a name="what-we-do">   
-    <h2>What we do</h2>
-</a>
+    <a name="why-we-do-it">
+        <h2>Why we do it</h2>
+    </a>
 
-<p>Onyx has successfully brought renewable, sustainable energy to over half the country and is actively pursuing future development in the U.S. and Canada.</p>
-
-<h3>Our goals</h3>
-<ol>
-    <li><span class="goal">Establish</span> sustainable, mutually beneficial relationships</li>
-    <li><span class="goal">Achieve</span> the most economical costs for services</li>
-    <li><span class="goal">Provide</span> great quality, service, and expertise to our clients</li>
-    <li><span class="goal">Protect</span> the environment</li>
-</ol>
-
-<a name="how-we-do-it">
-    <h2>How we do it</h2>
-</a>
-
-{{ gibberish | truncate: 300 | append: '...' | markdownify }}
-
-<h2>Our Partnership with Blackstone</h2>
-
-{{ gibberish | truncate: 600 | append: '...' | markdownify }}
-
-<a name="who-we-are">
-    <h2>Who we are</h2
-</a>
-
-<p>We have the long view in mind. We strive to build sustainable projects with lasting value. We establish relationships for years after a deal is done. Our main objective is to deliver best-in-class solar systems by providing deep project level oversight while harnessing local knowledge and expertise.</p>
+    {{ why | markdownify }}
 
 </article>

@@ -1,9 +1,3 @@
-## What We Do
+We fund, develop, construct, operate, and manage solar systems for the commercial and industrial sectors. Our clients range from public and private businesses to NGOs, non profits, government municipalities, and school districts.
 
-Onyx has successfully brought renewable, sustainable energy to over half the country and is actively pursuing future development in the U.S. and Canada.
-
-### Our Goals
-1. Establish relationships that lead to sustainable benefits for both parties
-2. Achieve the most economical costs for services
-3. Provide great quality, service, and expertise to our clients
-4. Protect the environment
+We have already brought renewable energy to over half the country and are actively pursuing future development in the U.S. and Canada. Take a look at some of our past and present [projects].
