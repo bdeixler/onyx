@@ -306,7 +306,7 @@
     }
 }
 
-.news-content, .job-content {
+.news-content, .job-content, .member-content {
     margin-bottom: $spacing-unit;
 
     h2 {
@@ -334,9 +334,11 @@
     }
 }
 
-.headshots {
-    float: right;
-    margin: 0 0 10px 10px;
-    width: 30%;
-    height: auto;
+.member-content {
+    img {
+        float: right;
+        margin: 0 0 10px 10px;
+        width: 30%;
+        height: auto;
+    }
 }

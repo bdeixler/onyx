@@ -1,7 +1,8 @@
 ---
 name: Matthew Rosenblum
 job: Chief Executive Officer
-image: "/images/headshots/placeholder.png"
 ---
+
+![]({{ site.baseurl }}/images/headshots/placeholder.png)
 
 Matthew Rosenblum, Founder and CEO, has more than 20 years of investment and trading experience. Previously, at Solops Matt was the largest producer and trader of Class 3 RECs in Connecticut and has personally conducted over 80 million dollars in REC transactions. Matt formed Onyx in partnership with Blackstone around his core operating team at Solops, LLC. Solops was formed by Matt to pursue C&I solar power development. Under Matt's leadership, Solops built a portfolio of solar systems in partnership with local utilities, construction firms and off-takers, and became a significant producer and trader of renewable energy certificates. Prior to Solops, Matt was the Chief Executive Officer of Neuwing Energy, a leading proprietary trader in carbon related credits and provider of commercial energy strategies that focus on financial performance and environmental responsibility. Fortune 100 companies would engage Neuwing to monetize the environmental incentives including rebates, tax credits, carbon credits, and renewable energy certificates.Prior to his experience in the solar and energy industry, Matt also served in management positions at Hambrecht & Quist. He managed public investing of a $5 billion dollar fund and served as the relationship manager for KKR and Wall Street. During the acquisition of TXU (the largest utility takeover in US history) Matt was in charge of the analysis and compilation of programs for rebates and renewable energy certificates. He was the youngest Managing Director in history of Hambrecht & Quist and during the takeover of Hambrecht & Quist by JP Morgan was in charge of integrating the NASDAQ desk. Matt majored in Finance at the University of South Florida.

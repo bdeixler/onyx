@@ -127,19 +127,6 @@ prose:
               field:
                   element: "text"
                   label: "Job Title"
-            - name: "image"
-              field:
-                  element: "multiselect"
-                  label: "Headshot"
-                  help: >
-                      To upload a new image, use the 
-                      'insert image' button in the text 
-                      editor. You can then delete the 
-                      url from the text file and select 
-                      the image from the dropdown menu 
-                      here.
-                  options: "http://dawaltconley.github.io/onyx/headshots.jsonp"
-                    # needs to be updated when site is moved
         _partners:
             - name: "title"
               field:

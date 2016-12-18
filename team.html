@@ -10,8 +10,7 @@ menu-title: Our Team
             {% if member.name == member_name %}
                 <li>
                     <h2>{{ member.name }}, {{ member.job }}</h2>
-                    <div>
-                        <img class="headshots" src="{{ member.image | prepend: site.baseurl }}" alt="">
+                    <div class="member-content">
                         {{ member.content }}
                     </div>
                 </li>
