@@ -42,6 +42,10 @@ $on-laptop:        800px;
     margin-right: calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / -2);
     padding-left: calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / 2);
     padding-right: calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / 2);
+    @include media-query($on-laptop) {
+        margin: 0 (-$spacing-unit);
+        padding: 0 $spacing-unit;
+    }
 }
 
 //default settings for centering a background image and fitting it to a div
