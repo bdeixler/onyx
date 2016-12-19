@@ -83,8 +83,6 @@
     }
 }
 
-
-
 /**
  * Site footer
  */
@@ -153,20 +151,14 @@
     }
 }
 
-
-
 /**
- * Page content
+ * Basic
  */
-.page-content {
-    padding: $spacing-unit 0;
-}
-
-.page-header {
+.header {
     margin-bottom: $spacing-unit;
 }
 
-.page-title {
+.title {
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
@@ -176,7 +168,7 @@
     }
 }
 
-.page-content {
+.content {
     margin-bottom: $spacing-unit;
 
     h2 {
@@ -204,6 +196,40 @@
     }
 }
 
+.collection-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+}
+
+.collection-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+.collection-link {
+    display: block;
+    font-size: 24px;
+}
+
+/**
+ * Page content
+ */
+.page-header {
+    @extend .header;
+}
+
+.page-title {
+    @extend .title;
+}
+
+.page-content {
+    @extend .content;
+    padding-top: $spacing-unit;
+}
 
 /**
  * Home
@@ -211,21 +237,16 @@
 
 #splash {
     width: 100%;
-    height: calc(100vh - 56px - #{$spacing-unit}); // could also omit spacing unit here and in margins; make div relative and move it up by one spacing unit. or remove spacing unit from margin of header (if thats where it exists)
-    margin: (-$spacing-unit) calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / -2) 0; //when the screen size gets to be less than $content-width, margin becoms positive,
-    padding: $spacing-unit calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / 2) 0;    //and the padding negative, causes problems
+    height: calc(100vh - 56px - #{$spacing-unit}); //could omit spacing unit here and in margins; make div relative and move it up by spacing unit. or remove it from margin of header (if thats where it exists)
+    margin-top: (-$spacing-unit);
+    padding-top: $spacing-unit;
     overflow: hidden;
-    background-image: $splash-image;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    @include screen-width;
+    @include background-center($splash-image);
 
     @include media-query($on-laptop) {
-        margin: (-$spacing-unit) calc((100vw - (#{$content-width} - #{$spacing-unit})) / -2) 0;
-        padding: $spacing-unit calc((100vw - (#{$content-width} - #{$spacing-unit})) / 2) 0;
+        margin: (-$spacing-unit) (-$spacing-unit) 0;
+        padding: $spacing-unit $spacing-unit 0;
     }
 }
 
@@ -277,70 +298,75 @@
 }
 
 /**
- * News, Jobs, and Team
+ * News
  */
-.news-list, .jobs-list, .members-list {
-    margin-left: 0;
-    list-style: none;
 
-    > li {
-        margin-bottom: $spacing-unit;
-    }
+.news-list {
+    @extend .collection-list;
 }
 
-.news-meta, .job-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
+.news-meta {
+    @extend .collection-meta;
 }
 
-.news-link, .job-link {
-    display: block;
-    font-size: 24px;
+.news-link {
+    @extend .collection-link;
 }
 
-.news-header, .job-header {
-    margin-bottom: $spacing-unit;
+.news-header {
+    @extend .header;
 }
 
-.news-title, .job-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
+.news-title {
+    @extend .title;
 }
 
-.news-content, .job-content, .member-content {
-    margin-bottom: $spacing-unit;
+.news-content {
+    @extend .content;
+}
 
-    h2 {
-        font-size: 32px;
+/**
+ * Jobs
+ */
 
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
+.jobs-list {
+    @extend .collection-list;
+}
 
-    h3 {
-        font-size: 26px;
+.job-meta {
+    @extend .collection-meta;
+}
 
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
+.job-link {
+    @extend .collection-link;
+}
 
-    h4 {
-        font-size: 20px;
+.job-header {
+    @extend .header;
+}
 
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
+.job-title {
+    @extend .title;
+}
+
+.job-content {
+    @extend .content;
+}
+
+/**
+ * Team
+ */
+
+.members-list {
+    @extend .news-list;
+}
+
+.member-title {
+    @extend .title;
 }
 
 .member-content {
+    @extend .content;
     img {
         float: right;
         margin: 0 0 10px 10px;

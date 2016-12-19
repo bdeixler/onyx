@@ -18,6 +18,7 @@ email: info@onyxrenewables.com
 description: Investing in Sustainable Solutions
 baseurl: "/onyx"
 url: "https://dawaltconley.github.io"
+permalink: /:title/
 twitter_username:
 github_username:
 collections:

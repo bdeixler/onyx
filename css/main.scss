@@ -3,8 +3,6 @@
 ---
 @charset "utf-8";
 
-
-
 // Our variables
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
@@ -16,7 +14,7 @@ $spacing-unit:     30px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$link-color:       #2a7ae2;
 
 $splash-image:     url({{ site.baseurl | append: '/images/backgrounds/vector-black.jpeg' }});
 
@@ -30,20 +28,31 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
+// Mixins
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
     }
 }
 
+//this effectively cancels out the wrapper for the physical div itself but keeps its contents wrapped
+@mixin screen-width {
+    margin-left: calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / -2);
+    margin-right: calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / -2);
+    padding-left: calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / 2);
+    padding-right: calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / 2);
+}
 
+//default settings for centering a background image and fitting it to a div
+@mixin background-center ($image) {
+    background-image: $image;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
