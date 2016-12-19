@@ -236,15 +236,17 @@
  */
 
 #splash {
+    position: relative;
+    top: (-$spacing-unit);
     width: 100%;
-    height: calc(100vh - 56px - #{$spacing-unit}); //could omit spacing unit here and in margins; make div relative and move it up by spacing unit. or remove it from margin of header (if thats where it exists)
-    margin-top: (-$spacing-unit);
+    height: calc(100vh - 56px - #{$spacing-unit}); 
     padding-top: $spacing-unit;
     overflow: hidden;
     @include screen-width;
     @include background-center($splash-image);
 
     @include media-query($on-laptop) {
+        top: 0;
         margin: (-$spacing-unit) (-$spacing-unit) 0;
         padding: $spacing-unit $spacing-unit 0;
     }
@@ -272,10 +274,16 @@
 }
 
 #home-nav {
-//    position: relative;
-    float: right;
-    width: 35%;
-    height: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    width: 100%;
+    height: 100%;
+    background-image: $home-nav-icon;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     a {
 //        position: absolute;
         display: block;

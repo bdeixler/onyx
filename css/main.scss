@@ -17,6 +17,7 @@ $background-color: #fdfdfd;
 $link-color:       #2a7ae2;
 
 $splash-image:     url({{ site.baseurl | append: '/images/backgrounds/vector-black.jpeg' }});
+$home-nav-icon:    url({{ site.baseurl | append: '/images/icons/white-sun.png' }});
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
