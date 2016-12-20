@@ -240,17 +240,12 @@
     position: relative;
     top: (-$spacing-unit);
     width: 100%;
+    height: calc(100vh - 56px); 
     height: calc(100vh - 56px - #{$spacing-unit}); 
     padding-top: $spacing-unit;
     overflow: hidden;
     @include screen-width;
     @include background-center($splash-image);
-
-    @include media-query($on-laptop) {
-        top: 0;
-        margin-top: -$spacing-unit;
-        padding-top: $spacing-unit;
-    }
 }
 
 .site-title {
@@ -281,11 +276,12 @@
     bottom: 0;
     transform: translate(-50%, 50%);
     width: 600px;
-    height: 600px;
+    height: 100%; // might want to make an actual image, not background, so I can omit this / set it to auto
     background-image: $home-nav-icon;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    
     a {
         position: absolute;
         display: block;
@@ -294,48 +290,31 @@
         text-transform: capitalize;
         line-height: 100px;
     }
+    
     img {
         display: block;
         height: 100px;
         width: 100px;
     }
+
     .who-we-are {
-        transform: translate(-100%, 0);
-        left: 108px;
-        top: 152px;
-        img {
-            float: right;
-            margin-left: calc(#{$spacing-unit} / 2);
-        }
+        @include nav-left($bottom);
     }
+
     .what-we-do {
-        transform: translate(-100%, 0);
-        left: 250px;
-        top: 10px;
-        img {
-            float: right;
-            margin-left: calc(#{$spacing-unit} / 2);
-        }
+        @include nav-left($top);
     }
+
     .how-we-do-it {
-        transform: translate(100%, 0);
-        right: 250px;
-        top: 10px;
-        img {
-            float: left;
-            margin-right: calc(#{$spacing-unit} / 2);
-        }
+        @include nav-right($top);
     }
-    .why-we-do-it{
-        transform: translate(100%, 0);
-        right: 108px;
-        top: 152px;
-        img {
-            float: left;
-            margin-right: calc(#{$spacing-unit} / 2);
-        }
+
+    .why-we-do-it {
+        @include nav-right($bottom);
     }
+
 }
+
 
 /**
  * News
