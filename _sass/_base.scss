@@ -36,6 +36,19 @@ body {
     overflow-x: hidden;
 }
 
+// styling for parallax layout -- could potentially be applied universally
+.parallax {
+    height: 100%;
+    overflow: hidden;
+    body {
+        perspective: $perspective;
+        perspective-origin-x: 100%;
+        transform-style: preserve-3d;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+
 
 
 /**

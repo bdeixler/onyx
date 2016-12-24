@@ -236,14 +236,27 @@
  * Home
  */
 
-#splash {
-    position: relative;
-    top: 0;
-    box-sizing: border-box;
-    height: calc(100vh - 56px); 
-    padding-top: $spacing-unit;
-    overflow: hidden;
+.splash {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+#splash-background {
+    transform: translateZ(-4px) scale(5);
+    transform-origin-x: 100%;
+    -webkit-transform: translateZ(-4px) scale(5);
+    -moz-transform: translateZ(-4px) scale(5);
+    -o-transform: translateZ(-4px) scale(5);
+    z-index: -2;
     @include background-center($splash-image);
+}
+
+#splash-content {
+    padding-top: calc(56px + #{$spacing-unit});
+    overflow: visible;
+    transform: translateZ(-1px) scale(2);
+    transform-origin-x: 100%;
+    z-index: -1;
 }
 
 .site-title {
@@ -316,9 +329,11 @@
 .section {
     padding-top: $spacing-unit;
     padding-bottom: $spacing-unit;
+    z-index: 1;
 }
 
 #who-we-are {
+    margin-top: calc(100vh - 56px); //for splash: think this is the best way to do this
     background-color: $icon-green;
     color: white; //should be page-wide
 }

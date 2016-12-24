@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: parallax
 ---
 <article>
 
@@ -10,7 +10,9 @@ layout: default
     {% capture why %}{% include _home/green-pitch.md %}{% endcapture %}
     {% capture blackstone %}{% include _home/blackstone.md %}{% endcapture %}
 
-    <div class="unwrap" id="splash">
+    <div class="splash" id="splash-background"></div>
+
+    <div class="splash wrapper" id="splash-content">
 
         <h1 class="site-title">{{ site.title }}</h1>
 

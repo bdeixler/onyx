@@ -31,6 +31,9 @@ $home-nav-icon:    url({{ site.baseurl | append: '/images/icons/white-sun.png' }
 $top:              248px, 15px;
 $bottom:           108px, 162px;
 
+// parallax
+$perspective:      1px;
+
 // Width of the content area
 $content-width:    800px;
 
