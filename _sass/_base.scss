@@ -11,6 +11,16 @@ dl, dd, ol, ul, figure {
 
 
 /**
+ * Set all page elements to more-intuitive border-box sizing
+ */
+ 
+* {
+    box-sizing: border-box;
+}
+
+
+
+/**
  * Basic styling
  */
 body {
@@ -157,19 +167,37 @@ pre {
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
+    max-width: $content-width;
     margin-left: auto;
-    padding-right: $spacing-unit;
+    margin-right: auto;
     padding-left: $spacing-unit;
+    padding-right: $spacing-unit;
     @extend %clearfix;
 
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
+    @include media-query($content-width) {
         padding-left: $spacing-unit / 2;
+        padding-right: $spacing-unit / 2;
+    }
+}
+
+.unwrap {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    @include media-query($content-width) {
+        margin-left: $spacing-unit / -2;
+        margin-right: $spacing-unit / -2;
+    }
+}
+
+.stretch {
+    @extend .unwrap;
+    padding-left: calc(50vw - 50%);
+    padding-right: calc(50vw - 50%);
+
+    @include media-query($content-width) {
+        padding-left: $spacing-unit / 2;
+        padding-right: $spacing-unit / 2;
     }
 }
 
@@ -184,20 +212,6 @@ pre {
         content: "";
         display: table;
         clear: both;
-    }
-}
-
-.unwrap {
-    margin-left:  calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / -2);
-    margin-right:  calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / -2);
-    padding-left: calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / 2);
-    padding-right: calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / 2);
-
-    @include media-query($on-laptop) {
-        margin-left: (-$spacing-unit);
-        margin-right: (-$spacing-unit);
-        padding-left: $spacing-unit;
-        padding-right: $spacing-unit;
     }
 }
 
