@@ -229,7 +229,6 @@
 
 .page-content {
     @extend .content;
-    padding-top: $spacing-unit;
 }
 
 /**
@@ -238,13 +237,11 @@
 
 #splash {
     position: relative;
-    top: (-$spacing-unit);
-    width: 100%;
+    top: 0;
+    box-sizing: border-box;
     height: calc(100vh - 56px); 
-    height: calc(100vh - 56px - #{$spacing-unit}); 
     padding-top: $spacing-unit;
     overflow: hidden;
-    @include screen-width;
     @include background-center($splash-image);
 }
 
@@ -276,7 +273,7 @@
     bottom: 0;
     transform: translate(-50%, 50%);
     width: 600px;
-    height: 100%; // might want to make an actual image, not background, so I can omit this / set it to auto
+    height: 600px; // might want to make an actual image, not background, so I can omit this / set it to auto
     background-image: $home-nav-icon;
     background-position: center;
     background-repeat: no-repeat;

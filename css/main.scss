@@ -20,6 +20,9 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
+$icon-green:       #9dcd58;
+$sky-blue:         #90c3d4;
+
 // Images
 $splash-image:     url({{ site.baseurl | append: '/images/backgrounds/vector-black.jpeg' }});
 $home-nav-icon:    url({{ site.baseurl | append: '/images/icons/white-sun.png' }});
@@ -38,20 +41,6 @@ $on-laptop:        800px;
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
-    }
-}
-
-// this effectively cancels out the wrapper for the physical div itself but keeps its contents wrapped
-@mixin screen-width {
-    margin-left:  calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / -2);
-    margin-right:  calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / -2);
-    padding-left: calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / 2);
-    padding-right: calc((100vw - (#{$content-width} - (2 * #{$spacing-unit}))) / 2);
-    @include media-query($on-laptop) {
-        margin-left: (-$spacing-unit);
-        margin-right: (-$spacing-unit);
-        padding-left: $spacing-unit;
-        padding-right: $spacing-unit;
     }
 }
 
