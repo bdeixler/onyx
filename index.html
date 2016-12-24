@@ -17,41 +17,53 @@ layout: default
         <p class="site-description">{{ site.description }}</p>
 
         <nav id="home-nav">
-            <a class="who-we-are" href="#who-we-are">
+            <a class="nav-who" href="#who-we-are">
                 <img src="{{ site.baseurl }}/images/icons/who-we-are-inverted.png" alt="">
                 Who we are
             </a>
-            <a class="what-we-do" href="#what-we-do">
+            <a class="nav-what" href="#what-we-do">
                 <img src="{{ site.baseurl }}/images/icons/what-we-do-inverted.png" alt="">
                 What we do
             </a>
-            <a class="how-we-do-it" href="#how-we-do-it">
+            <a class="nav-how" href="#how-we-do-it">
                 <img src="{{ site.baseurl }}/images/icons/how-we-do-it-inverted.png" alt="">
                 How we do it
             </a>
-            <a class="why-we-do-it" href="#why-we-do-it">
+            <a class="nav-why" href="#why-we-do-it">
                 <img src="{{ site.baseurl }}/images/icons/why-we-do-it-inverted.png" alt="">
                 Why we do it
             </a>
         </nav>
 
     </div>
+    
+    <div class="section unwrap" id="who-we-are">
 
-    <a name="who-we-are">
-        <h2>Who we are</h2>
-    </a>
+        <a name="who-we-are">
+            <h2>Who we are</h2>
+        </a>
 
-    {{ who | markdownify }}
+        {{ who | markdownify }}
 
-    <h3>Our Partnership with Blackstone</h2>
+    </div>
 
-    {{ blackstone | markdownify }}
+    <div class="section unwrap" id="blackstone">
 
-    <a name="what-we-do">   
-        <h2>What we do</h2>
-    </a>
+        <h3>Our partnership with Blackstone</h2>
 
-    {{ what | markdownify }}
+        {{ blackstone | markdownify }}
+
+    </div>
+
+    <div class="section unwrap" id="what-we-do">
+
+        <a name="what-we-do">   
+            <h2>What we do</h2>
+        </a>
+
+        {{ what | markdownify }}
+
+    </div>
 
     <!--
         <h3>Our goals</h3>
@@ -63,16 +75,24 @@ layout: default
         </ol>
     -->
 
-    <a name="how-we-do-it">
-        <h2>How we do it</h2>
-    </a>
+    <div class="section unwrap" id="how-we-do-it">
 
-    {{ how | markdownify }}
+        <a name="how-we-do-it">
+            <h2>How we do it</h2>
+        </a>
 
-    <a name="why-we-do-it">
-        <h2>Why we do it</h2>
-    </a>
+        {{ how | markdownify }}
 
-    {{ why | markdownify }}
+    </div>
+
+    <div class="section unwrap" id="why-we-do-it">
+
+        <a name="why-we-do-it">
+            <h2>Why we do it</h2>
+        </a>
+
+        {{ why | markdownify }}
+
+    </div>
 
 </article>

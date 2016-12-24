@@ -170,9 +170,7 @@
 }
 
 .content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
+    h2 { //this should all be basic
         font-size: 32px;
 
         @include media-query($on-laptop) {
@@ -219,6 +217,9 @@
 /**
  * Page content
  */
+
+// should be basic
+
 .page-header {
     @extend .header;
 }
@@ -294,22 +295,52 @@
         width: 100px;
     }
 
-    .who-we-are {
+    .nav-who {
         @include nav-left($bottom);
     }
 
-    .what-we-do {
+    .nav-what {
         @include nav-left($top);
     }
 
-    .how-we-do-it {
+    .nav-how {
         @include nav-right($top);
     }
 
-    .why-we-do-it {
+    .nav-why {
         @include nav-right($bottom);
     }
 
+}
+
+.section {
+    padding-top: $spacing-unit;
+    padding-bottom: $spacing-unit;
+}
+
+#who-we-are {
+    background-color: $icon-green;
+    color: white; //should be page-wide
+}
+
+#blackstone {
+    background-color: black;
+    color: white;
+}
+
+#what-we-do {
+    background-color: $sky-blue;
+    color: white;
+}
+
+#how-we-do-it {
+    background-color: $icon-green;
+    color: white;
+}
+
+#why-we-do-it {
+    background-color: $sky-blue;
+    color: white;
 }
 
 
