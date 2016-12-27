@@ -332,32 +332,34 @@
     padding-top: $spacing-unit;
     padding-bottom: $spacing-unit;
     z-index: 1;
+
+    color: white;
+
+    h2 {
+        text-decoration: none;
+        border-bottom: 1px solid white;
+    }
 }
 
 #who-we-are {
     margin-top: calc(100vh - 56px); //for splash: think this is the best way to do this
     background-color: $icon-green;
-    color: white; //should be page-wide
 }
 
 #blackstone {
     background-color: black;
-    color: white;
 }
 
 #what-we-do {
     background-color: $sky-blue;
-    color: white;
 }
 
 #how-we-do-it {
     background-color: $icon-green;
-    color: white;
 }
 
 #why-we-do-it {
     background-color: $sky-blue;
-    color: white;
 }
 
 
