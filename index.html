@@ -3,7 +3,7 @@ layout: parallax
 ---
 <article>
 
-    {% capture gibberish %}{% include gibberish.md %}{% endcapture %}
+    {% capture gibberish %}{% include lorem-ipsum.md %}{% endcapture %}
     {% capture who %}{% include _home/who-we-are.md %}{% endcapture %}
     {% capture what %}{% include _home/what-we-do.md %}{% endcapture %}
     {% capture how %}{% include _home/how-we-do-it.md %}{% endcapture %}
@@ -50,6 +50,8 @@ layout: parallax
         <h2>Who we are</h2>
 
         {{ who | markdownify }}
+
+        <!--{{ gibberish | truncate: 1000 | markdownify }}-->
 
     </div>
 
