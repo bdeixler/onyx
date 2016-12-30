@@ -340,7 +340,7 @@
 }
 
 #blackstone-background {
-    @include parallax(-30);
+    @include parallax(-100);
     @include background-center($blackstone-background);
 }
 

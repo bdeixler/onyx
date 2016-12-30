@@ -13,6 +13,26 @@
     }
 }
 
+.parallax-container {
+    @extend .unwrap;
+    overflow: hidden;
+}
+
+/*
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
+    .parallax-container {
+        overflow: hidden;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+
+        @include media-query($content-width) {
+            margin-left: $spacing-unit / -2;
+            margin-right: $spacing-unit / -2;
+        }
+    }
+}
+*/
+
 .parallax-group {
     @extend .unwrap;
     position: relative;

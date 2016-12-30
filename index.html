@@ -10,36 +10,40 @@ layout: parallax
     {% capture why %}{% include _home/green-pitch.md %}{% endcapture %}
     {% capture blackstone %}{% include _home/blackstone.md %}{% endcapture %}
 
-    <div class="parallax-group" id="splash">
+    <div class="parallax-container">
 
-        <div id="splash-background"></div>
+        <div class="parallax-group" id="splash">
 
-        <div class="wrapper" id="splash-content">
+            <div id="splash-background"></div>
 
-            <h1 class="site-title">{{ site.title }}</h1>
+            <div class="wrapper" id="splash-content">
 
-            <p class="site-description">{{ site.description }}</p>
+                <h1 class="site-title">{{ site.title }}</h1>
 
-            <nav id="home-nav">
-                <a class="nav-who" href="#who-we-are">
-                    <img src="{{ site.baseurl }}/images/icons/who-we-are-inverted.png" alt="">
-                    Who we are
-                </a>
-                <a class="nav-what" href="#what-we-do">
-                    <img src="{{ site.baseurl }}/images/icons/what-we-do-inverted.png" alt="">
-                    What we do
-                </a>
-                <a class="nav-how" href="#how-we-do-it">
-                    <img src="{{ site.baseurl }}/images/icons/how-we-do-it-inverted.png" alt="">
-                    How we do it
-                </a>
-                <a class="nav-why" href="#why-we-do-it">
-                    <img src="{{ site.baseurl }}/images/icons/why-we-do-it-inverted.png" alt="">
-                    Why we do it
-                </a>
-            </nav>
+                <p class="site-description">{{ site.description }}</p>
 
-        </div>
+                <nav id="home-nav">
+                    <a class="nav-who" href="#who-we-are">
+                        <img src="{{ site.baseurl }}/images/icons/who-we-are-inverted.png" alt="">
+                        Who we are
+                    </a>
+                    <a class="nav-what" href="#what-we-do">
+                        <img src="{{ site.baseurl }}/images/icons/what-we-do-inverted.png" alt="">
+                        What we do
+                    </a>
+                    <a class="nav-how" href="#how-we-do-it">
+                        <img src="{{ site.baseurl }}/images/icons/how-we-do-it-inverted.png" alt="">
+                        How we do it
+                    </a>
+                    <a class="nav-why" href="#why-we-do-it">
+                        <img src="{{ site.baseurl }}/images/icons/why-we-do-it-inverted.png" alt="">
+                        Why we do it
+                    </a>
+                </nav>
+
+            </div>
+
+        </div> 
 
     </div>
     
@@ -55,15 +59,19 @@ layout: parallax
 
     </div>
 
-    <div class="parallax-group">
+    <div class="parallax-container">
 
-        <div id="blackstone-background"></div>
+        <div class="parallax-group">
 
-        <div class="section wrapper">
+            <div id="blackstone-background"></div>
 
-            <h3>Our partnership with Blackstone</h3>
+            <div class="section wrapper">
 
-            {{ blackstone | markdownify }}
+                <h3>Our partnership with Blackstone</h3>
+
+                {{ blackstone | markdownify }}
+
+            </div>
 
         </div>
 
