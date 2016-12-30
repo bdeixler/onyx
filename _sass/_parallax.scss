@@ -1,0 +1,25 @@
+// styling for container elements of parallax pages
+
+.parallax-page {
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-perspective: calc(#{$perspective} * 1px);
+        -moz-perspective: calc(#{$perspective} * 1px);
+        -o-perspective: calc(#{$perspective} * 1px);
+        perspective: calc(#{$perspective} * 1px);
+    div {
+        position: relative;
+    }
+}
+
+.parallax-group {
+    @extend .unwrap;
+    position: relative;
+    z-index: 0;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
