@@ -18,16 +18,19 @@ $link-color:       #2a7ae2;
 
 $header-color:          #000;
 $header-text-color:     #fff;
-$footer-color:          #000;
+$header-height:         62px;
+
+$footer-color:          rgba(0, 0, 0, 0.75);
 $footer-text-color:     #fff;
+$footer-height:         200px;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
-$border-color:     #222;
+$border-color:       #222;
 $border-color-light: lighten($border-color, 15%);
-$border-color-dark:  darken($border-color, 20%);
+$border-color-dark:  #1d1d1d;
 
 $icon-green:       #9dcd58;
 $sky-blue:         #90c3d4;

@@ -2,10 +2,10 @@
  * Site header
  */
 .site-header {
-    position: relative; // Positioning context for the mobile navigation icon
+    position: relative;
     border-top: 5px solid $border-color-dark;
     border-bottom: 1px solid $border-color-light;
-    min-height: 56px;
+    min-height: $header-height;
     z-index: 1;
     color: $header-text-color;
     background-color: $header-color;
@@ -13,12 +13,12 @@
 
 .site-logo {
     width: auto;
-    height: 56px;
+    height: $header-height - 6px;
 }
 
 .site-nav {
     float: right;
-    line-height: 56px;
+    line-height: $header-height - 6px;
 
     .menu-icon {
         display: none;
@@ -87,8 +87,22 @@
 /**
  * Site footer
  */
+
+#footer-parallax {
+    box-sizing: content-box;
+    height: $footer-height;
+    margin-top: (-$footer-height);
+    border-bottom: $header-height solid black;
+    
+    .site-footer {
+        border-bottom: 0;
+        @include parallax;
+    }
+}
+
 .site-footer {
     border-top: 1px solid $border-color-light;
+    border-bottom: $header-height solid black;
     padding: $spacing-unit 0;
     color: $footer-text-color;
     background-color: $footer-color;
@@ -240,7 +254,7 @@
 
 #splash {
     height: 100vh;
-    margin-top: -62px;
+    margin-top: (-$header-height);
 }
 
 #splash-background {
@@ -250,7 +264,7 @@
 }
 
 #splash-content {
-    padding-top: 62px + $spacing-unit;
+    padding-top: $header-height + $spacing-unit;
     overflow: visible;
     z-index: -1;
     @include parallax(-100);
