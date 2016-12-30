@@ -240,27 +240,20 @@
 
 #splash {
     height: 100vh;
+    margin-top: -62px;
 }
 
 #splash-background {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    -webkit-transform: translateZ(-2px) scale(3);
-    transform: translateZ(-2px) scale(3);
-    transform-origin-x: 100%;
     z-index: -2;
     @include background-center($splash-image);
+    @include parallax(-200);
 }
 
 #splash-content {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    padding-top: calc(56px + #{$spacing-unit});
+    padding-top: 62px + $spacing-unit;
     overflow: visible;
-    -webkit-transform: translateZ(-1px) scale(2);
-    transform: translateZ(-1px) scale(2);
-    transform-origin-x: 100%;
     z-index: -1;
+    @include parallax(-100);
 }
 
 .site-title {

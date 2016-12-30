@@ -41,7 +41,7 @@ $top:              248px, 15px;
 $bottom:           108px, 162px;
 
 // parallax
-$perspective:      1px;
+$perspective:      100;
 
 // Width of the content area
 $content-width:    800px;
@@ -61,10 +61,24 @@ $on-laptop:        800px;
     background-image: $image;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
+}
+
+// settings for a layer of a parallax-group div
+// first line calculates scale to preserve original size when translated backwards
+// second line calculates minimum height adjusment necessary
+// for the layer to always fill the width of its parent parallax-group
+
+@mixin parallax ($depth) {
+    $layer-scale: calc(1 - #{$depth} / #{$perspective});
+    $height-adjust: calc((1 - (1 / #{$layer-scale})) * (100vh - 100%) / -2);
+    position: absolute;
+    top: $height-adjust; bottom: $height-adjust; left: 0; right: 0;
+    -webkit-transform: translateZ($depth * 1px) scale($layer-scale);
+    transform: translateZ($depth * 1px) scale($layer-scale);
 }
 
 // settings for left-side nav-icons
