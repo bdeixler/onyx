@@ -245,8 +245,8 @@
 
 #splash-background {
     z-index: -2;
-    @include background-center($splash-image);
     @include parallax(-200);
+    @include background-center($splash-background);
 }
 
 #splash-content {
@@ -339,8 +339,9 @@
     background-color: $icon-green;
 }
 
-#blackstone {
-    background-color: black;
+#blackstone-background {
+    @include parallax(-30);
+    @include background-center($blackstone-background);
 }
 
 #what-we-do {

@@ -33,8 +33,9 @@ $icon-green:       #9dcd58;
 $sky-blue:         #90c3d4;
 
 // Images
-$splash-image:     url({{ site.baseurl | append: '/images/backgrounds/vector-black.jpeg' }});
+$splash-background:     url({{ site.baseurl | append: '/images/backgrounds/vector-black.jpeg' }});
 $home-nav-icon:    url({{ site.baseurl | append: '/images/icons/white-sun.png' }});
+$blackstone-background: url({{ site.baseurl | append: '/images/backgrounds/vector-boxes.png' }});
 
 // x and y values for for home-nav icons
 $top:              248px, 15px;
