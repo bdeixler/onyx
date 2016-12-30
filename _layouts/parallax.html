@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html class="parallax-page">
+<html>
 
     {% include head.html %}
 
     <body>
+        
+        <div class="parallax-page">
 
-        {% include header.html %}
+            {% include header.html %}
 
-        <div class="page-content wrapper"> 
-            {{ content }}
+            <div class="page-content wrapper"> 
+                {{ content }}
+            </div>
+
+            {% include footer.html %}
+        
         </div>
-
-        {% include footer.html %}
 
     </body>
 

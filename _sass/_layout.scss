@@ -238,14 +238,6 @@
  * Home
  */
 
-.parallax-group {
-    @extend .unwrap;
-    position: relative;
-    z-index: 0;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-}
-
 #splash {
     height: 100vh;
 }
