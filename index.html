@@ -107,13 +107,23 @@ layout: parallax
 
     </div>
 
-    <div class="section stretch" id="why-we-do-it">
+    <div class="parallax-container">
 
-        <a name="why-we-do-it"></a>
-        
-        <h2>Why we do it</h2>
+        <div class="parallax-group" id="why-we-do-it">
 
-        {{ why | markdownify }}
+            <div id="why-background"></div>
+
+            <div class="section wrapper">
+
+                <a name="why-we-do-it"></a>
+                
+                <h2>Why we do it</h2>
+
+                {{ why | markdownify }}
+
+            </div>
+
+        </div>
 
     </div>
 

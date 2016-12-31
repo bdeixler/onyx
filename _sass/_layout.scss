@@ -367,7 +367,13 @@
 }
 
 #why-we-do-it {
-    background-color: $sky-blue;
+    padding-bottom: $footer-height + ($spacing-unit * 4);
+}
+
+#why-background {
+    height: 140vh;
+    @include parallax(-50);
+    @include background-image($image: $atmosphere-background, $y: top);
 }
 
 
