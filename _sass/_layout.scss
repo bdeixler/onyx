@@ -260,7 +260,7 @@
 #splash-background {
     z-index: -2;
     @include parallax(-200);
-    @include background-center($splash-background);
+    @include background-image($splash-background);
 }
 
 #splash-content {
@@ -355,7 +355,7 @@
 
 #blackstone-background {
     @include parallax(-100);
-    @include background-center($blackstone-background);
+    @include background-image($blackstone-background);
 }
 
 #what-we-do {

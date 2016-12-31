@@ -61,9 +61,9 @@ $on-laptop:        800px;
 }
 
 // default settings for centering a background image and fitting it to a div
-@mixin background-center ($image) {
+@mixin background-image ($image, $x: center, $y: center) {
     background-image: $image;
-    background-position: center center;
+    background-position: $x $y;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -76,13 +76,13 @@ $on-laptop:        800px;
 // second line calculates minimum height adjusment necessary
 // for the layer to always fill the width of its parent parallax-group
 
-@mixin parallax ($depth) {
-    $layer-scale: calc(1 - #{$depth} / #{$perspective});
-    $height-adjust: calc((1 - (1 / #{$layer-scale})) * (100vh - 100%) / -2);
+@mixin parallax ($depth: 0) {
+    $scale: calc(1 - #{$depth} / #{$perspective});
+    $height-adjust: calc((1 - (1 / #{$scale})) * (100vh - 100%) / -2);
     position: absolute;
     top: $height-adjust; bottom: $height-adjust; left: 0; right: 0;
-    -webkit-transform: translateZ($depth * 1px) scale($layer-scale);
-    transform: translateZ($depth * 1px) scale($layer-scale);
+    -webkit-transform: translateZ($depth * 1px) scale($scale);
+    transform: translateZ($depth * 1px) scale($scale);
 }
 
 // settings for left-side nav-icons
