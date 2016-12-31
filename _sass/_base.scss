@@ -183,11 +183,6 @@ pre {
 .unwrap {
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
-
-    @include media-query($content-width) {
-        margin-left: $spacing-unit / -2;
-        margin-right: $spacing-unit / -2;
-    }
 }
 
 .stretch {
