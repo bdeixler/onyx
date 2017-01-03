@@ -1,0 +1,127 @@
+/**
+ * Home
+ */
+
+#splash {
+    height: 100vh;
+    margin-top: (-$header-height);
+}
+
+#splash-background {
+    z-index: -2;
+    @include parallax(-200);
+    @include background-image($splash-background);
+}
+
+#splash-content {
+    padding-top: $header-height + $spacing-unit;
+    overflow: visible;
+    z-index: -1;
+    @include parallax(-100);
+}
+
+.site-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: white;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.site-description {
+    font-size: 26px;
+    font-style: italic;
+    line-height: 1;
+    color: white;
+
+    @include media-query($on-laptop) {
+        font-size: 20px;
+    }
+}
+
+#home-nav {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    width: 600px;
+    height: 600px; // might want to make an actual image, not background, so I can omit this / set it to auto
+    background-image: $home-nav-icon;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    a {
+        position: absolute;
+        display: block;
+        color: white;
+        font-size: 1.5em;
+        text-transform: capitalize;
+        line-height: 100px;
+    }
+    
+    img {
+        display: block;
+        height: 100px;
+        width: 100px;
+    }
+
+    .nav-who {
+        @include nav-left($bottom);
+    }
+
+    .nav-what {
+        @include nav-left($top);
+    }
+
+    .nav-how {
+        @include nav-right($top);
+    }
+
+    .nav-why {
+        @include nav-right($bottom);
+    }
+
+}
+
+.section {
+    padding-top: $spacing-unit;
+    padding-bottom: $spacing-unit;
+    z-index: 1;
+    color: white;
+
+    h2 {
+        text-decoration: none;
+        border-bottom: 1px solid white;
+    }
+}
+
+#who-we-are {
+    background-color: $icon-green;
+}
+
+#blackstone-background {
+    @include parallax(-100);
+    @include background-image($blackstone-background);
+}
+
+#what-we-do {
+    background-color: $sky-blue;
+}
+
+#how-we-do-it {
+    background-color: $icon-green;
+}
+
+#why-we-do-it {
+    padding-bottom: $footer-height + ($spacing-unit * 4);
+}
+
+#why-background {
+    height: 140vh;
+    @include parallax(-50);
+    @include background-image($image: $atmosphere-background, $y: top);
+}
