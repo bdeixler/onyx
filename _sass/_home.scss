@@ -21,24 +21,24 @@
 }
 
 .site-title {
-    font-size: 42px;
+    font-size: $title-size;
     letter-spacing: -1px;
     line-height: 1;
     color: white;
 
     @include media-query($on-laptop) {
-        font-size: 36px;
+        font-size: $title-size * 0.8;
     }
 }
 
 .site-description {
-    font-size: 26px;
+    font-size: $tagline-size;
     font-style: italic;
     line-height: 1;
     color: white;
 
     @include media-query($on-laptop) {
-        font-size: 20px;
+        font-size: $tagline-size * 0.8;
     }
 }
 
@@ -49,8 +49,18 @@
     color: white;
 
     h2 {
+        font-size: 2em;
+        line-height: 1;
+        text-transform: capitalize;
         text-decoration: none;
         border-bottom: 1px solid white;
+    }
+
+    h3 {
+        font-size: 1.75em;
+        line-height: 1;
+        text-transform: capitalize;
+        text-decoration: none;
     }
 }
 
