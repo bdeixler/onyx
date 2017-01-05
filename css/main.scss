@@ -3,8 +3,11 @@
 ---
 @charset "utf-8";
 
+// Google fonts
+@import url('https://fonts.googleapis.com/css?family=Arimo|Lato|Open+Sans|PT+Sans|Raleway|Roboto|Source+Sans+Pro|Ubuntu');
+
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: 'Roboto', sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
