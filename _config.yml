@@ -42,6 +42,8 @@ defaults:
     values:
         layout: "job"
         permalink: "/careers/:title"
+exclude:
+    - "*/.help.md"
 
 prose:
     ignore:
