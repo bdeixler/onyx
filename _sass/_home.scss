@@ -42,63 +42,6 @@
     }
 }
 
-#home-nav {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%, 50%);
-    width: 600px;
-    height: 600px; // might want to make an actual image, not background, so I can omit this / set it to auto
-    background-image: $home-nav-icon;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    
-    a {
-        position: absolute;
-        display: block;
-        color: white;
-        font-size: 1.5em;
-        text-transform: capitalize;
-        line-height: 100px;
-    }
-
-}
-    
-.nav-icon {
-    display: block;
-    height: 100px;
-    width: 100px;
-}
-
-#nav-who {
-    @include nav-left($bottom);
-    .nav-icon {
-        @include background-image($who-icon);
-    }
-}
-
-#nav-what {
-    @include nav-left($top);
-    .nav-icon {
-        @include background-image($what-icon);
-    }
-}
-
-#nav-how {
-    @include nav-right($top);
-    .nav-icon {
-        @include background-image($how-icon);
-    }
-}
-
-#nav-why {
-    @include nav-right($bottom);
-    .nav-icon {
-        @include background-image($why-icon);
-    }
-}
-
 .section {
     padding-top: $spacing-unit;
     padding-bottom: $spacing-unit;
