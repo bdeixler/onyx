@@ -41,6 +41,12 @@ $home-nav-icon:    url({{ site.baseurl | append: '/images/icons/white-sun.png' }
 $blackstone-background: url({{ site.baseurl | append: '/images/backgrounds/vector-boxes.png' }});
 $atmosphere-background: url({{ site.baseurl | append: '/images/backgrounds/earth-space.jpg' }});
 
+// Icons
+$who-icon:         url({{ site.baseurl | append: '/images/icons/who-we-are-inverted.png'}});
+$what-icon:        url({{ site.baseurl | append: '/images/icons/what-we-do-inverted.png'}});
+$how-icon:         url({{ site.baseurl | append: '/images/icons/how-we-do-it-inverted.png'}});
+$why-icon:         url({{ site.baseurl | append: '/images/icons/why-we-do-it-inverted.png'}});
+
 // x and y values for for home-nav icons
 $top:              248px, 15px;
 $bottom:           108px, 162px;
@@ -72,10 +78,13 @@ $on-laptop:        800px;
     background-size: cover;
 }
 
-// settings for a layer of a parallax-group div
-// first line calculates scale to preserve original size when translated backwards
-// second line calculates minimum height adjusment necessary
-// for the layer to always fill the width of its parent parallax-group
+/*
+    settings for a layer of a parallax-group div
+    first line calculates scale to preserve original size
+    when translated backwards
+    second line calculates minimum height adjusment necessary
+    for the layer to always fill the width of its parent parallax-group
+*/
 
 @mixin parallax ($depth: 0) {
     $scale: calc(1 - #{$depth} / #{$perspective});
@@ -91,7 +100,7 @@ $on-laptop:        800px;
     top: nth($which, 2);
     left: nth($which, 1);
     transform: translate(-100%, 0);
-    img {
+    .nav-icon {
         float: right;
         margin-left: calc(#{$spacing-unit} / 2);
     }
@@ -102,7 +111,7 @@ $on-laptop:        800px;
     top: nth($which, 2);
     right: nth($which, 1);
     transform: translate(100%, 0);
-    img {
+    .nav-icon {
         float: left;
         margin-right: calc(#{$spacing-unit} / 2);
     }

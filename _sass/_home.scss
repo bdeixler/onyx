@@ -62,29 +62,41 @@
         text-transform: capitalize;
         line-height: 100px;
     }
+
+}
     
-    img {
-        display: block;
-        height: 100px;
-        width: 100px;
-    }
+.nav-icon {
+    display: block;
+    height: 100px;
+    width: 100px;
+}
 
-    .nav-who {
-        @include nav-left($bottom);
+#nav-who {
+    @include nav-left($bottom);
+    .nav-icon {
+        @include background-image($who-icon);
     }
+}
 
-    .nav-what {
-        @include nav-left($top);
+#nav-what {
+    @include nav-left($top);
+    .nav-icon {
+        @include background-image($what-icon);
     }
+}
 
-    .nav-how {
-        @include nav-right($top);
+#nav-how {
+    @include nav-right($top);
+    .nav-icon {
+        @include background-image($how-icon);
     }
+}
 
-    .nav-why {
-        @include nav-right($bottom);
+#nav-why {
+    @include nav-right($bottom);
+    .nav-icon {
+        @include background-image($why-icon);
     }
-
 }
 
 .section {
