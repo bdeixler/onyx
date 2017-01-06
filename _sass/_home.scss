@@ -20,6 +20,14 @@
     @include parallax(-100);
 }
 
+@include home-nav($scale: 1);
+
+@media screen and (max-width: $on-palm) {
+    #home-nav {
+        display: none;
+    }
+}
+
 .site-title {
     font-size: $title-size;
     letter-spacing: -1px;
