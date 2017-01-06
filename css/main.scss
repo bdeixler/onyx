@@ -3,12 +3,22 @@
 ---
 @charset "utf-8";
 
-// Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+// Google fonts
+@import url('https://fonts.googleapis.com/css?family=Arimo|Lato|Open+Sans|PT+Sans|Raleway|Roboto|Source+Sans+Pro|Ubuntu');
+
+/*
+ * Variables
+ */
+
+$base-font-family: 'Roboto', sans-serif;
+$base-font-size:   1.5em;
 $base-font-weight: 400;
+$base-line-height: 1.35;
+
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+
+$title-size:       3em;
+$tagline-size:     1.75em;
 
 $spacing-unit:     30px;
 
@@ -41,6 +51,12 @@ $home-nav-icon:    url({{ site.baseurl | append: '/images/icons/white-sun.png' }
 $blackstone-background: url({{ site.baseurl | append: '/images/backgrounds/vector-boxes.png' }});
 $atmosphere-background: url({{ site.baseurl | append: '/images/backgrounds/earth-space.jpg' }});
 
+// Icons
+$who-icon:         url({{ site.baseurl | append: '/images/icons/who-we-are-inverted.png'}});
+$what-icon:        url({{ site.baseurl | append: '/images/icons/what-we-do-inverted.png'}});
+$how-icon:         url({{ site.baseurl | append: '/images/icons/how-we-do-it-inverted.png'}});
+$why-icon:         url({{ site.baseurl | append: '/images/icons/why-we-do-it-inverted.png'}});
+
 // x and y values for for home-nav icons
 $top:              248px, 15px;
 $bottom:           108px, 162px;
@@ -54,12 +70,9 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-// Mixins
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
+/*
+ * Mixins
+ */
 
 // default settings for centering a background image and fitting it to a div
 @mixin background-image ($image, $x: center, $y: center) {
@@ -72,10 +85,13 @@ $on-laptop:        800px;
     background-size: cover;
 }
 
-// settings for a layer of a parallax-group div
-// first line calculates scale to preserve original size when translated backwards
-// second line calculates minimum height adjusment necessary
-// for the layer to always fill the width of its parent parallax-group
+/*
+    settings for a layer of a parallax-group div
+    first line calculates scale to preserve original size
+    when translated backwards
+    second line calculates minimum height adjusment necessary
+    for the layer to always fill the width of its parent parallax-group
+*/
 
 @mixin parallax ($depth: 0) {
     $scale: calc(1 - #{$depth} / #{$perspective});
@@ -91,7 +107,7 @@ $on-laptop:        800px;
     top: nth($which, 2);
     left: nth($which, 1);
     transform: translate(-100%, 0);
-    img {
+    .nav-icon {
         float: right;
         margin-left: calc(#{$spacing-unit} / 2);
     }
@@ -102,7 +118,7 @@ $on-laptop:        800px;
     top: nth($which, 2);
     right: nth($which, 1);
     transform: translate(100%, 0);
-    img {
+    .nav-icon {
         float: left;
         margin-right: calc(#{$spacing-unit} / 2);
     }
@@ -115,6 +131,7 @@ $on-laptop:        800px;
         "header",
         "footer",
         "home",
+        "home-nav",
         "parallax",
         "syntax-highlighting"
 ;

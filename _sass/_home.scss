@@ -21,70 +21,25 @@
 }
 
 .site-title {
-    font-size: 42px;
+    font-size: $title-size;
     letter-spacing: -1px;
     line-height: 1;
     color: white;
 
-    @include media-query($on-laptop) {
-        font-size: 36px;
+    @media screen and (max-width: $on-laptop) {
+        font-size: $title-size * 0.8;
     }
 }
 
 .site-description {
-    font-size: 26px;
+    font-size: $tagline-size;
     font-style: italic;
     line-height: 1;
     color: white;
 
-    @include media-query($on-laptop) {
-        font-size: 20px;
+    @media screen and (max-width: $on-laptop) {
+        font-size: $tagline-size * 0.8;
     }
-}
-
-#home-nav {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%, 50%);
-    width: 600px;
-    height: 600px; // might want to make an actual image, not background, so I can omit this / set it to auto
-    background-image: $home-nav-icon;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    
-    a {
-        position: absolute;
-        display: block;
-        color: white;
-        font-size: 1.5em;
-        text-transform: capitalize;
-        line-height: 100px;
-    }
-    
-    img {
-        display: block;
-        height: 100px;
-        width: 100px;
-    }
-
-    .nav-who {
-        @include nav-left($bottom);
-    }
-
-    .nav-what {
-        @include nav-left($top);
-    }
-
-    .nav-how {
-        @include nav-right($top);
-    }
-
-    .nav-why {
-        @include nav-right($bottom);
-    }
-
 }
 
 .section {
@@ -94,8 +49,18 @@
     color: white;
 
     h2 {
+        font-size: 2em;
+        line-height: 1;
+        text-transform: capitalize;
         text-decoration: none;
         border-bottom: 1px solid white;
+    }
+
+    h3 {
+        font-size: 1.75em;
+        line-height: 1;
+        text-transform: capitalize;
+        text-decoration: none;
     }
 }
 
