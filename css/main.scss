@@ -6,7 +6,10 @@
 // Google fonts
 @import url('https://fonts.googleapis.com/css?family=Arimo|Lato|Open+Sans|PT+Sans|Raleway|Roboto|Source+Sans+Pro|Ubuntu');
 
-// Our variables
+/*
+ * Variables
+ */
+
 $base-font-family: 'Roboto', sans-serif;
 $base-font-size:   1.5em;
 $base-font-weight: 400;
@@ -67,12 +70,9 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-// Mixins
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
+/*
+ * Mixins
+ */
 
 // default settings for centering a background image and fitting it to a div
 @mixin background-image ($image, $x: center, $y: center) {

@@ -174,7 +174,7 @@ pre {
     padding-right: $spacing-unit;
     @extend %clearfix;
 
-    @include media-query($content-width) {
+    @media screen and (max-width: $content-width) {
         padding-left: $spacing-unit / 2;
         padding-right: $spacing-unit / 2;
     }
@@ -190,7 +190,7 @@ pre {
     padding-left: calc(50vw - 50%);
     padding-right: calc(50vw - 50%);
 
-    @include media-query($content-width) {
+    @media screen and (max-width: $content-width) {
         padding-left: $spacing-unit / 2;
         padding-right: $spacing-unit / 2;
     }
