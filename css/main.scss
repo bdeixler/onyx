@@ -103,26 +103,201 @@ $on-laptop:        800px;
 }
 
 // settings for left-side nav-icons
-@mixin nav-left ($which) {
-    top: nth($which, 2);
-    left: nth($which, 1);
+@mixin nav-left ($which, $scale) {
+    top: nth($which, 2) * $scale;
+    left: nth($which, 1) * $scale;
     transform: translate(-100%, 0);
     .nav-icon {
         float: right;
-        margin-left: calc(#{$spacing-unit} / 2);
+        margin-left: $spacing-unit / 2 * $scale;
     }
 }
 
 // settings for right-side nav-icons
-@mixin nav-right ($which) {
-    top: nth($which, 2);
-    right: nth($which, 1);
+@mixin nav-right ($which, $scale) {
+    top: nth($which, 2) * $scale;
+    right: nth($which, 1) * $scale;
     transform: translate(100%, 0);
     .nav-icon {
         float: left;
-        margin-right: calc(#{$spacing-unit} / 2);
+        margin-right: $spacing-unit / 2 * $scale;
     }
 }
+
+// mixin for the entire home nav with a scale variable
+
+@mixin home-nav ($scale: 1) {
+    $main-dur: .8s;
+    $item-dur: .5s;
+
+    #home-nav {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+        width: 600px * $scale;
+        height: 600px * $scale; // might want to make an actual image, not background, so I can omit this / set it to auto
+        background-image: $home-nav-icon;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        animation-name: spin-up;
+        animation-duration: $main-dur;
+        animation-timing-function: cubic-bezier(0,.42,.08,1);
+        
+        a {
+            position: absolute;
+            display: block;
+        }
+
+    }
+        
+    .nav-icon {
+        display: block;
+        height: 100px * $scale;
+        width: 100px * $scale;
+    }
+
+    .nav-text {
+        display: inline;
+        color: white;
+        font-size: 1.5em * $scale;
+        text-transform: capitalize;
+        line-height: 100px * $scale;
+    }
+
+    #nav-who {
+        @include nav-left($bottom, $scale);
+        .nav-icon {
+            @include background-image($who-icon);
+            
+            animation-name: fade-spin-left;
+            animation-duration: $item-dur;
+            animation-fill-mode: backwards;
+            animation-delay: $main-dur;
+        }
+        
+        .nav-text {
+            animation-name: fade-slide-left;
+            animation-duration: $item-dur;
+            animation-fill-mode: backwards;
+            animation-delay: $main-dur;
+        }
+    }
+
+    #nav-what {
+        @include nav-left($top, $scale);
+        
+        .nav-icon {
+            @include background-image($what-icon);
+            
+            animation-name: fade-spin-left;
+            animation-duration: $item-dur;
+            animation-fill-mode: backwards;
+            animation-delay: $main-dur + 0.1s;
+        }
+        
+        .nav-text {
+            animation-name: fade-slide-left;
+            animation-duration: $item-dur;
+            animation-fill-mode: backwards;
+            animation-delay: $main-dur + 0.1s;
+        }
+    }
+
+    #nav-how {
+        @include nav-right($top, $scale);
+        .nav-icon {
+            @include background-image($how-icon);
+            
+            animation-name: fade-spin-right;
+            animation-duration: $item-dur;
+            animation-fill-mode: backwards;
+            animation-delay: $main-dur + 0.2s;
+        }
+        
+        .nav-text {
+            animation-name: fade-slide-right;
+            animation-duration: $item-dur;
+            animation-fill-mode: backwards;
+            animation-delay: $main-dur + 0.2s;
+        }
+    }
+
+    #nav-why {
+        @include nav-right($bottom, $scale);
+        .nav-icon {
+            @include background-image($why-icon);
+            
+            animation-name: fade-spin-right;
+            animation-duration: $item-dur;
+            animation-fill-mode: backwards;
+            animation-delay: $main-dur + 0.3s;
+        }
+        
+        .nav-text {
+            animation-name: fade-slide-right;
+            animation-duration: $item-dur;
+            animation-fill-mode: backwards;
+            animation-delay: $main-dur + 0.3s;
+        }
+    }
+}
+
+/*
+ * Animations
+ */
+
+@keyframes fade-spin-left {
+    from {
+        opacity: 0;
+        transform: perspective(calc(#{$perspective} * 1px)) rotateY(90deg);
+    }
+    to {
+        opacity: 1;
+        transform: perspective(calc(#{$perspective} * 1px)) rotateY(0deg);
+    }
+}
+
+@keyframes fade-spin-right {
+    from {
+        opacity: 0;
+        transform: perspective(calc(#{$perspective} * 1px)) rotateY(-90deg);
+    }
+    to {
+        opacity: 1;
+        transform: perspective(calc(#{$perspective} * 1px)) rotateY(0deg);
+    }
+}
+
+@keyframes fade-slide-left {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fade-slide-right {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes spin-up {
+    from {transform: translate(-50%, 100%) rotate(-360deg);}
+    to {transform: translate(-50%, 50%) rotate(0deg);}
+}
+    
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
@@ -131,7 +306,6 @@ $on-laptop:        800px;
         "header",
         "footer",
         "home",
-        "home-nav",
         "parallax",
         "syntax-highlighting"
 ;
