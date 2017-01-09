@@ -29,6 +29,7 @@
 }
 
 .site-title {
+    font-family: $title-font-family;
     font-size: $title-size;
     letter-spacing: -1px;
     line-height: 1;
@@ -40,6 +41,7 @@
 }
 
 .site-description {
+    font-family: $title-font-family;
     font-size: $tagline-size;
     font-style: italic;
     line-height: 1;

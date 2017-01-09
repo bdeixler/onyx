@@ -10,7 +10,11 @@
  * Variables
  */
 
-$base-font-family: 'Lora', sans-serif;
+$base-font-family: 'Muli', sans-serif;
+$heading-font-family: 'Raleway', sans-serif;
+$title-font-family: 'Lora', serif;
+$menu-font-family: 'Quicksand', sans-serif;
+
 $base-font-size:   1.5em;
 $base-font-weight: 400;
 $base-line-height: 1.35;
@@ -162,6 +166,7 @@ $on-laptop:        800px;
     .nav-text {
         display: inline;
         color: white;
+        font-family: $menu-font-family;
         font-size: 1.5em * $scale;
         text-transform: capitalize;
         line-height: 100px * $scale;
