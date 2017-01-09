@@ -94,7 +94,6 @@
 }
 
 #why-background {
-    height: 140vh;
     @include parallax(-50);
     @include background-image($image: $atmosphere-background, $y: top);
 }
