@@ -149,6 +149,8 @@ $on-laptop:        800px;
         animation-name: spin-up;
         animation-duration: $main-dur;
         animation-timing-function: cubic-bezier(0,.42,.08,1);
+        animation-delay: 0.2s;
+        animation-fill-mode: backwards;
         
         a {
             position: absolute;
@@ -179,15 +181,15 @@ $on-laptop:        800px;
             
             animation-name: fade-spin-left;
             animation-duration: $item-dur;
-            animation-fill-mode: backwards;
             animation-delay: $main-dur;
+            animation-fill-mode: backwards;
         }
         
         .nav-text {
             animation-name: fade-slide-left;
             animation-duration: $item-dur;
-            animation-fill-mode: backwards;
             animation-delay: $main-dur;
+            animation-fill-mode: backwards;
         }
     }
 
@@ -199,15 +201,15 @@ $on-laptop:        800px;
             
             animation-name: fade-spin-left;
             animation-duration: $item-dur;
-            animation-fill-mode: backwards;
             animation-delay: $main-dur + 0.1s;
+            animation-fill-mode: backwards;
         }
         
         .nav-text {
             animation-name: fade-slide-left;
             animation-duration: $item-dur;
-            animation-fill-mode: backwards;
             animation-delay: $main-dur + 0.1s;
+            animation-fill-mode: backwards;
         }
     }
 
@@ -218,15 +220,15 @@ $on-laptop:        800px;
             
             animation-name: fade-spin-right;
             animation-duration: $item-dur;
-            animation-fill-mode: backwards;
             animation-delay: $main-dur + 0.2s;
+            animation-fill-mode: backwards;
         }
         
         .nav-text {
             animation-name: fade-slide-right;
             animation-duration: $item-dur;
-            animation-fill-mode: backwards;
             animation-delay: $main-dur + 0.2s;
+            animation-fill-mode: backwards;
         }
     }
 
@@ -237,15 +239,15 @@ $on-laptop:        800px;
             
             animation-name: fade-spin-right;
             animation-duration: $item-dur;
-            animation-fill-mode: backwards;
             animation-delay: $main-dur + 0.3s;
+            animation-fill-mode: backwards;
         }
         
         .nav-text {
             animation-name: fade-slide-right;
             animation-duration: $item-dur;
-            animation-fill-mode: backwards;
             animation-delay: $main-dur + 0.3s;
+            animation-fill-mode: backwards;
         }
     }
 }
