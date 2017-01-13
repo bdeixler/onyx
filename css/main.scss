@@ -4,13 +4,19 @@
 @charset "utf-8";
 
 // Google fonts
-@import url('https://fonts.googleapis.com/css?family=Alegreya|Crimson+Text|Droid+Serif|Lato|Libre+Baskerville|Lora:400,400i|Muli:400,400i|Noto+Serif:400,400i|Open+Sans:400,400i|PT+Sans|PT+Serif|Playfair+Display:400,400i|Quattrocento|Quicksand|Raleway:400,400i|Source+Serif+Pro|Trirong|Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Crimson+Text|Droid+Serif|Lato|Libre+Baskerville|Lora:400,400i|Muli:400,400i|Noto+Serif:400,400i|Open+Sans:400,400i|Open+Sans+Condensed:300:300i|PT+Sans|Pt+Sans+Narrow|PT+Serif|Playfair+Display:400,400i|Quattrocento|Quicksand|Raleway:400,400i|Source+Serif+Pro|Trirong|Work+Sans');
+
+@import url('https://fonts.googleapis.com/css?family=BenchNine:300,400|News+Cycle|Pragati+Narrow|Yantramanav:300'); //Menu Fonts
 
 /*
  * Variables
  */
 
-$base-font-family: 'Lora', sans-serif;
+$base-font-family: 'Open Sans', sans-serif;
+$heading-font-family: 'Raleway', sans-serif;
+$title-font-family: 'Lora', serif;
+$menu-font-family: 'Open Sans Condensed', sans-serif;
+
 $base-font-size:   1.5em;
 $base-font-weight: 400;
 $base-line-height: 1.35;
@@ -57,11 +63,15 @@ $what-icon:        url({{ site.baseurl | append: '/images/icons/what-we-do-inver
 $how-icon:         url({{ site.baseurl | append: '/images/icons/how-we-do-it-inverted.png'}});
 $why-icon:         url({{ site.baseurl | append: '/images/icons/why-we-do-it-inverted.png'}});
 
-// x and y values for for home-nav icons
-$top:              248px, 15px;
-$bottom:           108px, 162px;
+// Home Nav
+$home-nav-size:    525px;
+$nav-icon-size:    115px;
+$nav-text-size:    1.5em;
 
-// parallax
+$top:              0.3087, 0.0381;
+$bottom:           0.0381, 0.3087;
+
+// Parallax
 $perspective:      100;
 
 // Width of the content area
@@ -103,26 +113,170 @@ $on-laptop:        800px;
 }
 
 // settings for left-side nav-icons
-@mixin nav-left ($which) {
-    top: nth($which, 2);
-    left: nth($which, 1);
-    transform: translate(-100%, 0);
+@mixin nav-left ($which, $scale) {
+    top: nth($which, 2) * $home-nav-size * $scale;
+    left: nth($which, 1) * $home-nav-size * $scale;
+    transform: translate(calc(-100% + (#{$nav-icon-size} / 2 * #{$scale})), -50%);
     .nav-icon {
         float: right;
-        margin-left: calc(#{$spacing-unit} / 2);
+        margin-left: $spacing-unit / 2 * $scale;
     }
 }
 
 // settings for right-side nav-icons
-@mixin nav-right ($which) {
-    top: nth($which, 2);
-    right: nth($which, 1);
-    transform: translate(100%, 0);
+@mixin nav-right ($which, $scale) {
+    top: nth($which, 2) * $home-nav-size * $scale;
+    right: nth($which, 1) * $home-nav-size * $scale;
+    transform: translate(calc(100% - (#{$nav-icon-size} / 2 * #{$scale})), -50%);
     .nav-icon {
         float: left;
-        margin-right: calc(#{$spacing-unit} / 2);
+        margin-right: $spacing-unit / 2 * $scale;
     }
 }
+
+// mixin for the entire home nav with a scale variable
+
+@mixin home-nav ($scale: 1, $text: true) {
+    $main-dur: 1s;
+    $item-dur: .8s;
+
+    #home-nav {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+        width: $home-nav-size * $scale;
+        height: $home-nav-size * $scale;
+        background-image: $home-nav-icon;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        transition: .5s;
+        animation-name: spin-up;
+        animation-duration: $main-dur;
+        animation-timing-function: cubic-bezier(0,.42,.08,1);
+        animation-delay: 0.2s;
+        animation-fill-mode: backwards;
+        
+        a {
+            position: absolute;
+            display: block;
+
+            transition: inherit;
+            animation-name: fade-in;
+            animation-duration: $item-dur;
+            animation-fill-mode: backwards;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+    }
+        
+    .nav-icon {
+        display: block;
+        height: $nav-icon-size * $scale;
+        width: $nav-icon-size * $scale;
+
+        transition: inherit;
+        animation-duration: inherit;
+        animation-delay: inherit;
+        animation-fill-mode: inherit;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .nav-text {
+        @if $text {
+            display: inline;
+        } @else {
+            display: none;
+        }
+        color: white;
+        font-family: $menu-font-family;
+        font-size: $nav-text-size * $scale;
+        text-transform: capitalize;
+        line-height: $nav-icon-size * $scale;
+        transition: inherit;
+    }
+
+    #nav-who {
+        @include nav-left($bottom, $scale);
+        animation-delay: $main-dur;
+        .nav-icon {
+            @include background-image($who-icon);
+            animation-name: rotate-left;
+        }
+    }
+
+    #nav-what {
+        @include nav-left($top, $scale);
+        animation-delay: $main-dur + 0.1s;
+        .nav-icon {
+            @include background-image($what-icon);
+            animation-name: rotate-left;
+        }
+    }
+
+    #nav-how {
+        @include nav-right($top, $scale);
+        animation-delay: $main-dur + 0.2s;
+        .nav-icon {
+            @include background-image($how-icon);
+            animation-name: rotate-right;
+        }
+    }
+
+    #nav-why {
+        @include nav-right($bottom, $scale);
+        animation-delay: $main-dur + 0.3s;
+        .nav-icon {
+            @include background-image($why-icon);
+            animation-name: rotate-right;
+        }
+    }
+}
+
+/*
+ * Animations
+ */
+
+@keyframes rotate-left {
+    from {
+        transform: perspective(180px) rotateY(90deg);
+    }
+    to {
+        transform: perspective(180px) rotateY(0deg);
+    }
+}
+
+@keyframes rotate-right {
+    from {
+        transform: perspective(180px) rotateY(-90deg);
+    }
+    to {
+        transform: perspective(180px) rotateY(0deg);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin-up {
+    from {transform: translate(-50%, 100%) rotate(-180deg);}
+    to {transform: translate(-50%, 50%) rotate(0deg);}
+}
+    
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
@@ -131,7 +285,6 @@ $on-laptop:        800px;
         "header",
         "footer",
         "home",
-        "home-nav",
         "parallax",
         "syntax-highlighting"
 ;

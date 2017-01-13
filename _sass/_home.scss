@@ -9,6 +9,7 @@
 
 #splash-background {
     z-index: -2;
+    background-color: #000;
     @include parallax(-200);
     @include background-image($splash-background);
 }
@@ -20,7 +21,28 @@
     @include parallax(-100);
 }
 
+@include home-nav($scale: 1.5);
+
+@media screen and (max-width: 1280px) {
+    @include home-nav($scale: 1);
+}
+
+@media screen and (max-width: 1000px) {
+    @include home-nav($scale: 0.82);
+}
+
+@media screen and (max-width: 800px) {
+    @include home-nav($scale: 0.82, $text: false);
+}
+
+@media screen and (max-width: $on-palm) {
+    #home-nav {
+        display: none;
+    }
+}
+
 .site-title {
+    font-family: $title-font-family;
     font-size: $title-size;
     letter-spacing: -1px;
     line-height: 1;
@@ -32,6 +54,7 @@
 }
 
 .site-description {
+    font-family: $title-font-family;
     font-size: $tagline-size;
     font-style: italic;
     line-height: 1;
@@ -86,7 +109,6 @@
 }
 
 #why-background {
-    height: 140vh;
     @include parallax(-50);
     @include background-image($image: $atmosphere-background, $y: top);
 }
