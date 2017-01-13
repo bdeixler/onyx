@@ -137,8 +137,8 @@ $on-laptop:        800px;
 // mixin for the entire home nav with a scale variable
 
 @mixin home-nav ($scale: 1, $text: true) {
-    $main-dur: .8s;
-    $item-dur: .5s;
+    $main-dur: 1s;
+    $item-dur: .8s;
 
     #home-nav {
         position: absolute;
@@ -273,7 +273,7 @@ $on-laptop:        800px;
 }
 
 @keyframes spin-up {
-    from {transform: translate(-50%, 100%) rotate(-360deg);}
+    from {transform: translate(-50%, 100%) rotate(-180deg);}
     to {transform: translate(-50%, 50%) rotate(0deg);}
 }
     
