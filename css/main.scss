@@ -152,6 +152,7 @@ $on-laptop:        800px;
         background-repeat: no-repeat;
         background-size: contain;
 
+        transition: .5s;
         animation-name: spin-up;
         animation-duration: $main-dur;
         animation-timing-function: cubic-bezier(0,.42,.08,1);
@@ -162,9 +163,14 @@ $on-laptop:        800px;
             position: absolute;
             display: block;
 
+            transition: inherit;
             animation-name: fade-in;
             animation-duration: $item-dur;
             animation-fill-mode: backwards;
+
+            &:hover {
+                text-decoration: none;
+            }
         }
 
     }
@@ -174,9 +180,14 @@ $on-laptop:        800px;
         height: $nav-icon-size * $scale;
         width: $nav-icon-size * $scale;
 
+        transition: inherit;
         animation-duration: inherit;
         animation-delay: inherit;
         animation-fill-mode: inherit;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     .nav-text {
@@ -190,6 +201,7 @@ $on-laptop:        800px;
         font-size: $nav-text-size * $scale;
         text-transform: capitalize;
         line-height: $nav-icon-size * $scale;
+        transition: inherit;
     }
 
     #nav-who {
