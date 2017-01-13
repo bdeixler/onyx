@@ -136,7 +136,7 @@ $on-laptop:        800px;
 
 // mixin for the entire home nav with a scale variable
 
-@mixin home-nav ($scale: 1) {
+@mixin home-nav ($scale: 1, $text: true) {
     $main-dur: .8s;
     $item-dur: .5s;
 
@@ -161,11 +161,6 @@ $on-laptop:        800px;
         a {
             position: absolute;
             display: block;
-            color: white;
-            font-family: $menu-font-family;
-            font-size: $nav-text-size * $scale;
-            text-transform: capitalize;
-            line-height: $nav-icon-size * $scale;
 
             animation-name: fade-in;
             animation-duration: $item-dur;
@@ -182,6 +177,19 @@ $on-laptop:        800px;
         animation-duration: inherit;
         animation-delay: inherit;
         animation-fill-mode: inherit;
+    }
+
+    .nav-text {
+        @if $text {
+            display: inline;
+        } @else {
+            display: none;
+        }
+        color: white;
+        font-family: $menu-font-family;
+        font-size: $nav-text-size * $scale;
+        text-transform: capitalize;
+        line-height: $nav-icon-size * $scale;
     }
 
     #nav-who {

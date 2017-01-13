@@ -21,7 +21,19 @@
     @include parallax(-100);
 }
 
-@include home-nav($scale: 1);
+@include home-nav($scale: 1.5);
+
+@media screen and (max-width: 1280px) {
+    @include home-nav($scale: 1);
+}
+
+@media screen and (max-width: 1000px) {
+    @include home-nav($scale: 0.82);
+}
+
+@media screen and (max-width: 800px) {
+    @include home-nav($scale: 0.82, $text: false);
+}
 
 @media screen and (max-width: $on-palm) {
     #home-nav {
