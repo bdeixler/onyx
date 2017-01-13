@@ -4,16 +4,18 @@
 @charset "utf-8";
 
 // Google fonts
-@import url('https://fonts.googleapis.com/css?family=Alegreya|Crimson+Text|Droid+Serif|Lato|Libre+Baskerville|Lora:400,400i|Muli:400,400i|Noto+Serif:400,400i|Open+Sans:400,400i|PT+Sans|PT+Serif|Playfair+Display:400,400i|Quattrocento|Quicksand|Raleway:400,400i|Source+Serif+Pro|Trirong|Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Crimson+Text|Droid+Serif|Lato|Libre+Baskerville|Lora:400,400i|Muli:400,400i|Noto+Serif:400,400i|Open+Sans:400,400i|Open+Sans+Condensed:300:300i|PT+Sans|Pt+Sans+Narrow|PT+Serif|Playfair+Display:400,400i|Quattrocento|Quicksand|Raleway:400,400i|Source+Serif+Pro|Trirong|Work+Sans');
+
+@import url('https://fonts.googleapis.com/css?family=BenchNine:300,400|News+Cycle|Pragati+Narrow|Yantramanav:300'); //Menu Fonts
 
 /*
  * Variables
  */
 
-$base-font-family: 'Muli', sans-serif;
+$base-font-family: 'Open Sans', sans-serif;
 $heading-font-family: 'Raleway', sans-serif;
 $title-font-family: 'Lora', serif;
-$menu-font-family: 'Quicksand', sans-serif;
+$menu-font-family: 'Open Sans Condensed', sans-serif;
 
 $base-font-size:   1.5em;
 $base-font-weight: 400;
@@ -61,11 +63,15 @@ $what-icon:        url({{ site.baseurl | append: '/images/icons/what-we-do-inver
 $how-icon:         url({{ site.baseurl | append: '/images/icons/how-we-do-it-inverted.png'}});
 $why-icon:         url({{ site.baseurl | append: '/images/icons/why-we-do-it-inverted.png'}});
 
-// x and y values for for home-nav icons
-$top:              248px, 15px;
-$bottom:           108px, 162px;
+// Home Nav
+$home-nav-size:    525px;
+$nav-icon-size:    115px;
+$nav-text-size:    1.5em;
 
-// parallax
+$top:              0.3087, 0.0381;
+$bottom:           0.0381, 0.3087;
+
+// Parallax
 $perspective:      100;
 
 // Width of the content area
@@ -108,9 +114,9 @@ $on-laptop:        800px;
 
 // settings for left-side nav-icons
 @mixin nav-left ($which, $scale) {
-    top: nth($which, 2) * $scale;
-    left: nth($which, 1) * $scale;
-    transform: translate(-100%, 0);
+    top: nth($which, 2) * $home-nav-size * $scale;
+    left: nth($which, 1) * $home-nav-size * $scale;
+    transform: translate(calc(-100% + (#{$nav-icon-size} / 2 * #{$scale})), -50%);
     .nav-icon {
         float: right;
         margin-left: $spacing-unit / 2 * $scale;
@@ -119,9 +125,9 @@ $on-laptop:        800px;
 
 // settings for right-side nav-icons
 @mixin nav-right ($which, $scale) {
-    top: nth($which, 2) * $scale;
-    right: nth($which, 1) * $scale;
-    transform: translate(100%, 0);
+    top: nth($which, 2) * $home-nav-size * $scale;
+    right: nth($which, 1) * $home-nav-size * $scale;
+    transform: translate(calc(100% - (#{$nav-icon-size} / 2 * #{$scale})), -50%);
     .nav-icon {
         float: left;
         margin-right: $spacing-unit / 2 * $scale;
@@ -139,8 +145,8 @@ $on-laptop:        800px;
         left: 50%;
         bottom: 0;
         transform: translate(-50%, 50%);
-        width: 600px * $scale;
-        height: 600px * $scale; // might want to make an actual image, not background, so I can omit this / set it to auto
+        width: $home-nav-size * $scale;
+        height: $home-nav-size * $scale;
         background-image: $home-nav-icon;
         background-position: center;
         background-repeat: no-repeat;
@@ -157,9 +163,9 @@ $on-laptop:        800px;
             display: block;
             color: white;
             font-family: $menu-font-family;
-            font-size: 1.35em * $scale;
+            font-size: $nav-text-size * $scale;
             text-transform: capitalize;
-            line-height: 100px * $scale;
+            line-height: $nav-icon-size * $scale;
 
             animation-name: fade-in;
             animation-duration: $item-dur;
@@ -170,8 +176,8 @@ $on-laptop:        800px;
         
     .nav-icon {
         display: block;
-        height: 100px * $scale;
-        width: 100px * $scale;
+        height: $nav-icon-size * $scale;
+        width: $nav-icon-size * $scale;
 
         animation-duration: inherit;
         animation-delay: inherit;
@@ -221,19 +227,19 @@ $on-laptop:        800px;
 
 @keyframes rotate-left {
     from {
-        transform: perspective(calc(#{$perspective} * 1px)) rotateY(90deg);
+        transform: perspective(180px) rotateY(90deg);
     }
     to {
-        transform: perspective(calc(#{$perspective} * 1px)) rotateY(0deg);
+        transform: perspective(180px) rotateY(0deg);
     }
 }
 
 @keyframes rotate-right {
     from {
-        transform: perspective(calc(#{$perspective} * 1px)) rotateY(-90deg);
+        transform: perspective(180px) rotateY(-90deg);
     }
     to {
-        transform: perspective(calc(#{$perspective} * 1px)) rotateY(0deg);
+        transform: perspective(180px) rotateY(0deg);
     }
 }
 
