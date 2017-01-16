@@ -42,6 +42,7 @@
 }
 
 .site-title {
+    display: none;
     font-family: $title-font-family;
     font-size: $title-size;
     letter-spacing: -1px;
@@ -54,6 +55,7 @@
 }
 
 .site-description {
+    display: none;
     font-family: $title-font-family;
     font-size: $tagline-size;
     font-style: italic;
