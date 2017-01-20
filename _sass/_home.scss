@@ -50,7 +50,10 @@
     color: white;
 
     @media screen and (max-width: $on-laptop) {
-        font-size: $title-size * 0.8;
+        font-size: $title-size * 0.78;
+    }
+    @media screen and (max-width: $on-palm) {
+        font-size: $title-size * 0.65;
     }
 }
 
@@ -63,7 +66,10 @@
     color: white;
 
     @media screen and (max-width: $on-laptop) {
-        font-size: $tagline-size * 0.8;
+        font-size: $tagline-size * 0.78;
+    }
+    @media screen and (max-width: $on-palm) {
+        font-size: $tagline-size * 0.65;
     }
 }
 
