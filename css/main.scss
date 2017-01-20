@@ -28,7 +28,7 @@ $tagline-size:     1.58em;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
+$text-color:       #333;
 $background-color: #fdfdfd;
 $link-color:       #2a7ae2;
 
@@ -50,9 +50,11 @@ $border-color-dark:  #1d1d1d;
 
 $icon-green:       #9dcd58;
 $sky-blue:         #90c3d4;
+$div-color-1:      white;
+$div-color-2:      ghostwhite;
 
 // Images
-$splash-background:     url({{ site.baseurl | append: '/images/backgrounds/vector-black.jpeg' }});
+$splash-background:     url({{ site.baseurl | append: '/images/ben/panels-09.jpg' }});
 $home-nav-icon:    url({{ site.baseurl | append: '/images/icons/white-sun.png' }});
 $blackstone-background: url({{ site.baseurl | append: '/images/backgrounds/vector-boxes.png' }});
 $atmosphere-background: url({{ site.baseurl | append: '/images/backgrounds/earth-space.jpg' }});
@@ -75,7 +77,7 @@ $bottom:           0.0381, 0.3087;
 $perspective:      100;
 
 // Width of the content area
-$content-width:    1024px;
+$content-width:    1200px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
