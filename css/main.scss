@@ -15,7 +15,8 @@
 $base-font-family: 'Open Sans', sans-serif;
 $heading-font-family: 'Raleway', sans-serif;
 $title-font-family: 'Lora', serif;
-$menu-font-family: 'Open Sans Condensed', sans-serif;
+$header-font-family: 'Open Sans Condensed', sans-serif;
+$nav-font-family: 'Quicksand', sans-serif;
 
 $base-font-size:   1.2em;
 $base-font-weight: 400;
@@ -28,7 +29,7 @@ $tagline-size:     1.75em;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
+$text-color:       #333;
 $background-color: #fdfdfd;
 $link-color:       #2a7ae2;
 
@@ -50,9 +51,11 @@ $border-color-dark:  #1d1d1d;
 
 $icon-green:       #9dcd58;
 $sky-blue:         #90c3d4;
+$div-color-1:      white;
+$div-color-2:      ghostwhite;
 
 // Images
-$splash-background:     url({{ site.baseurl | append: '/images/backgrounds/vector-black.jpeg' }});
+$splash-background:     url({{ site.baseurl | append: '/images/ben/panels-09.jpg' }});
 $home-nav-icon:    url({{ site.baseurl | append: '/images/icons/white-sun.png' }});
 $blackstone-background: url({{ site.baseurl | append: '/images/backgrounds/vector-boxes.png' }});
 $atmosphere-background: url({{ site.baseurl | append: '/images/backgrounds/earth-space.jpg' }});
@@ -75,7 +78,7 @@ $bottom:           0.0381, 0.3087;
 $perspective:      100;
 
 // Width of the content area
-$content-width:    1024px;
+$content-width:    1200px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -197,7 +200,7 @@ $on-laptop:        800px;
             display: none;
         }
         color: white;
-        font-family: $menu-font-family;
+        font-family: $nav-font-family;
         font-size: $nav-text-size * $scale;
         text-transform: capitalize;
         line-height: $nav-icon-size * $scale;
