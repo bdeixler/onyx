@@ -169,14 +169,25 @@ pre {
  */
 
 .wrapper {
-    box-sizing: content-box;
-    max-width: $content-width;
+    max-width: $content-max;
     margin-left: auto;
     margin-right: auto;
     padding-left: $spacing-unit;
     padding-right: $spacing-unit;
     @extend %clearfix;
-    @include wrapper-queries;
+    
+    @media screen and (max-width: $content-max) {
+        max-width: $content-mid;
+    }
+
+    @media screen and (max-width: $content-mid) {
+        max-width: $content-min;
+    }
+
+    @media screen and (max-width: $content-min) {
+        padding-left: $spacing-unit / 2;
+        padding-right: $spacing-unit / 2;
+    }
 }
 
 .unwrap {
@@ -188,7 +199,6 @@ pre {
     padding-left: calc(50vw - 50%);
     padding-right: calc(50vw - 50%);
     @extend .unwrap;
-    @include wrapper-queries;
 }
 
 
