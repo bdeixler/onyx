@@ -86,6 +86,24 @@ $on-laptop:        800px;
  * Mixins
  */
 
+@mixin wrapper-queries {
+
+    @media screen and (max-width: $content-width) {
+        width: 1000px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 800px;
+    }
+
+    @media screen and (max-width: 800px) {
+        width: auto;
+        padding-left: $spacing-unit / 2;
+        padding-right: $spacing-unit / 2;
+    }
+
+}
+
 // default settings for centering a background image and fitting it to a div
 @mixin background-image ($image, $x: center, $y: center) {
     background-image: $image;

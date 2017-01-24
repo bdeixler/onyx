@@ -167,6 +167,7 @@ pre {
 /**
  * Wrapper
  */
+
 .wrapper {
     box-sizing: content-box;
     width: $content-width;
@@ -175,11 +176,7 @@ pre {
     padding-left: $spacing-unit;
     padding-right: $spacing-unit;
     @extend %clearfix;
-
-    @media screen and (max-width: $content-width) {
-        padding-left: $spacing-unit / 2;
-        padding-right: $spacing-unit / 2;
-    }
+    @include wrapper-queries;
 }
 
 .unwrap {
@@ -188,14 +185,10 @@ pre {
 }
 
 .stretch {
-    @extend .unwrap;
     padding-left: calc(50vw - 50%);
     padding-right: calc(50vw - 50%);
-
-    @media screen and (max-width: $content-width) {
-        padding-left: $spacing-unit / 2;
-        padding-right: $spacing-unit / 2;
-    }
+    @extend .unwrap;
+    @include wrapper-queries;
 }
 
 
