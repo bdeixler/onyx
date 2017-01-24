@@ -23,15 +23,15 @@
 
 @include home-nav($scale: 1.25);
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: $content-max) {
     @include home-nav($scale: 1);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: $content-mid) {
     @include home-nav($scale: 0.82);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: $content-min) {
     @include home-nav($scale: 0.82, $text: false);
 }
 
