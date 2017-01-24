@@ -14,7 +14,7 @@
 }
 
 .parallax-container {
-    @extend .unwrap;
+    @extend .stretch;
     overflow: hidden;
 }
 

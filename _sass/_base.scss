@@ -170,7 +170,7 @@ pre {
 
 .wrapper {
     box-sizing: content-box;
-    width: $content-width;
+    max-width: $content-width;
     margin-left: auto;
     margin-right: auto;
     padding-left: $spacing-unit;
