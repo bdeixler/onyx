@@ -69,7 +69,7 @@ $why-icon:         url({{ site.baseurl | append: '/images/icons/why-we-do-it-inv
 // Home Nav
 $home-nav-size:    525px;
 $nav-icon-size:    115px;
-$nav-text-size:    1.5em;
+$nav-text-size:    1.6em;
 
 $top:              0.3087, 0.0381;
 $bottom:           0.0381, 0.3087;
@@ -126,6 +126,7 @@ $on-laptop:        800px;
     top: nth($which, 2) * $home-nav-size * $scale;
     left: nth($which, 1) * $home-nav-size * $scale;
     transform: translate(calc(-100% + (#{$nav-icon-size} / 2 * #{$scale})), -50%);
+    text-align: right;
     .nav-icon {
         float: right;
         margin-left: $spacing-unit / 2 * $scale;
@@ -171,6 +172,7 @@ $on-laptop:        800px;
         a {
             position: absolute;
             display: block;
+            height: $nav-icon-size * $scale;
 
             transition: inherit;
             animation-name: fade-in;
@@ -201,15 +203,16 @@ $on-laptop:        800px;
 
     .nav-text {
         @if $text {
-            display: inline;
+            display: inline-block;
         } @else {
             display: none;
         }
+        transform: translateY(calc(((#{$nav-icon-size} / 2) - 50%) * #{$scale}));
         color: white;
         font-family: $nav-font-family;
         font-size: $nav-text-size * $scale;
         text-transform: capitalize;
-        line-height: $nav-icon-size * $scale;
+        line-height: 1.1;
         transition: inherit;
     }
 
