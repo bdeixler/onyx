@@ -37,7 +37,7 @@ $header-color:          #000;
 $header-text-color:     #fff;
 $header-height:         62px;
 
-$footer-color:          rgba(0, 0, 0, 0.75);
+$footer-color:          rgba(0, 0, 0, 0.5);
 $footer-text-color:     #fff;
 $footer-height:         200px;
 
@@ -55,10 +55,10 @@ $div-color-1:      white;
 $div-color-2:      ghostwhite;
 
 // Images
-$splash-background:     url({{ site.baseurl | append: '/images/ben/panels-09.jpg' }});
+$splash-background:     url({{ site.baseurl | append: '/images/ben/ps/panels-05.jpg' }});
 $home-nav-icon:    url({{ site.baseurl | append: '/images/icons/white-sun.png' }});
 $blackstone-background: url({{ site.baseurl | append: '/images/backgrounds/vector-boxes.png' }});
-$atmosphere-background: url({{ site.baseurl | append: '/images/backgrounds/earth-space.jpg' }});
+$atmosphere-background: url({{ site.baseurl | append: '/images/klein/klein-08.jpg' }});
 
 // Icons
 $who-icon:         url({{ site.baseurl | append: '/images/icons/who-we-are-inverted.png'}});

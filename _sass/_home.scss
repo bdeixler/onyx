@@ -115,18 +115,27 @@
     background-color: $div-color-1;
 }
 
-#why-group {
-    padding-bottom: $footer-height + ($spacing-unit * 4);
-}
-
-#why-background {
-    @include parallax(-50);
-    @include background-image($image: $atmosphere-background, $y: top);
-}
-
 #why-we-do-it {
+    background-color: $div-color-2;
+}
+
+#contact-background {
+    @include parallax(-100);
+    @include background-image($image: $atmosphere-background, $y: bottom);
+}
+
+#contact {
+    min-height: calc(100vh - #{$header-height});
+    padding-bottom: $footer-height;
+    max-width: 300px;
     color: white;
+    line-height: 1.5;
     h2 {
+        margin-top: $spacing-unit;
         border-color: white;
+    }
+    p {
+        display: inline-block;
+        margin-bottom: 2em;
     }
 }

@@ -9,6 +9,7 @@ layout: parallax
     {% capture how %}{% include _home/how-we-do-it.md %}{% endcapture %}
     {% capture why %}{% include _home/green-pitch.md %}{% endcapture %}
     {% capture blackstone %}{% include _home/blackstone.md %}{% endcapture %}
+    {% capture contact %}{% include _contact/general.md %}{% endcapture %}
 
     <div class="parallax-container">
 
@@ -107,19 +108,27 @@ layout: parallax
 
     </div>
 
+    <div class="section stretch" id="why-we-do-it">
+
+        <a name="why-we-do-it"></a>
+
+        <h2>Why we do it</h2>
+
+        {{ why | markdownify }}
+
+    </div>
+
     <div class="parallax-container">
 
-        <div class="parallax-group" id="why-group">
+        <div class="parallax-group">
 
-            <div id="why-background"></div>
+            <div id="contact-background"></div>
 
-            <div class="section" id="why-we-do-it">
-
-                <a name="why-we-do-it"></a>
+            <div class="section" id="contact">
                 
-                <h2>Why we do it</h2>
+                <h2>Contact</h2>
 
-                {{ why | markdownify }}
+                {{ contact | markdownify }}
 
             </div>
 
