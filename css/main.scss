@@ -130,6 +130,7 @@ $on-laptop:        800px;
     .nav-icon {
         float: right;
         margin-left: $spacing-unit / 2 * $scale;
+        animation-name: rotate-left;
     }
 }
 
@@ -141,6 +142,7 @@ $on-laptop:        800px;
     .nav-icon {
         float: left;
         margin-right: $spacing-unit / 2 * $scale;
+        animation-name: rotate-right;
     }
 }
 
@@ -182,6 +184,38 @@ $on-laptop:        800px;
             &:hover {
                 text-decoration: none;
             }
+
+            &:nth-child(1) {
+                @include nav-left($bottom, $scale);
+                animation-delay: $main-dur;
+                .nav-icon {
+                    @include background-image($who-icon);
+                }
+            }
+
+            &:nth-child(2) {
+                @include nav-left($top, $scale);
+                animation-delay: $main-dur + 0.1s;
+                .nav-icon {
+                    @include background-image($what-icon);
+                }
+            }
+
+            &:nth-child(3) {
+                @include nav-right($top, $scale);
+                animation-delay: $main-dur + 0.2s;
+                .nav-icon {
+                    @include background-image($how-icon);
+                }
+            }
+
+            &:nth-child(4) {
+                @include nav-right($bottom, $scale);
+                animation-delay: $main-dur + 0.3s;
+                .nav-icon {
+                    @include background-image($why-icon);
+                }
+            }
         }
 
     }
@@ -214,42 +248,6 @@ $on-laptop:        800px;
         text-transform: capitalize;
         line-height: 1.1;
         transition: inherit;
-    }
-
-    #nav-who {
-        @include nav-left($bottom, $scale);
-        animation-delay: $main-dur;
-        .nav-icon {
-            @include background-image($who-icon);
-            animation-name: rotate-left;
-        }
-    }
-
-    #nav-what {
-        @include nav-left($top, $scale);
-        animation-delay: $main-dur + 0.1s;
-        .nav-icon {
-            @include background-image($what-icon);
-            animation-name: rotate-left;
-        }
-    }
-
-    #nav-how {
-        @include nav-right($top, $scale);
-        animation-delay: $main-dur + 0.2s;
-        .nav-icon {
-            @include background-image($how-icon);
-            animation-name: rotate-right;
-        }
-    }
-
-    #nav-why {
-        @include nav-right($bottom, $scale);
-        animation-delay: $main-dur + 0.3s;
-        .nav-icon {
-            @include background-image($why-icon);
-            animation-name: rotate-right;
-        }
     }
 }
 
