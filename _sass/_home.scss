@@ -73,6 +73,13 @@
     }
 }
 
+main > div {
+    background-color: $div-color-1;
+    &:nth-child(2n) {
+        background-color: $div-color-2;
+    }
+}
+
 .section {
     padding-top: $spacing-unit;
     padding-bottom: $spacing-unit;
@@ -94,10 +101,6 @@
     }
 }
 
-#who-we-are {
-    background-color: $div-color-1;
-}
-
 #blackstone-background {
     @include parallax(-100);
     @include background-image($blackstone-background);
@@ -107,24 +110,12 @@
     color: white;
 }
 
-#what-we-do {
-    background-color: $div-color-2;
-}
-
-#how-we-do-it {
-    background-color: $div-color-1;
-}
-
-#why-we-do-it {
-    background-color: $div-color-2;
-}
-
 #contact-background {
     @include parallax(-100);
-    @include background-image($image: $atmosphere-background, $y: bottom);
+    @include background-image($image: $contact-background, $y: bottom);
 }
 
-#contact {
+#contact-info {
     min-height: calc(100vh - #{$header-height});
     padding-bottom: $footer-height;
     max-width: 300px;

@@ -1,54 +1,54 @@
 ---
 layout: parallax
 ---
-<article>
+{% capture gibberish %}{% include lorem-ipsum.md %}{% endcapture %}
+{% capture who %}{% include _home/who-we-are.md %}{% endcapture %}
+{% capture what %}{% include _home/what-we-do.md %}{% endcapture %}
+{% capture how %}{% include _home/how-we-do-it.md %}{% endcapture %}
+{% capture why %}{% include _home/green-pitch.md %}{% endcapture %}
+{% capture blackstone %}{% include _home/blackstone.md %}{% endcapture %}
+{% capture contact %}{% include _contact/general.md %}{% endcapture %}
 
-    {% capture gibberish %}{% include lorem-ipsum.md %}{% endcapture %}
-    {% capture who %}{% include _home/who-we-are.md %}{% endcapture %}
-    {% capture what %}{% include _home/what-we-do.md %}{% endcapture %}
-    {% capture how %}{% include _home/how-we-do-it.md %}{% endcapture %}
-    {% capture why %}{% include _home/green-pitch.md %}{% endcapture %}
-    {% capture blackstone %}{% include _home/blackstone.md %}{% endcapture %}
-    {% capture contact %}{% include _contact/general.md %}{% endcapture %}
+<div class="parallax-container">
 
-    <div class="parallax-container">
+    <div class="parallax-group" id="splash">
 
-        <div class="parallax-group" id="splash">
+        <div id="splash-background"></div>
 
-            <div id="splash-background"></div>
+        <div id="splash-content">
 
-            <div id="splash-content">
+            <h1 class="site-title">{{ site.title }}</h1>
 
-                <h1 class="site-title">{{ site.title }}</h1>
+            <p class="site-description">{{ site.description }}</p>
 
-                <p class="site-description">{{ site.description }}</p>
+            <nav id="home-nav">
+                <a href="#who-we-are">
+                    <div class="nav-icon"></div>
+                    <span class="nav-text">Who<br>we are</span>
+                </a>
+                <a href="#what-we-do">
+                    <div class="nav-icon"></div>
+                    <span class="nav-text">Our<br>process</span>
+                </a>
+                <a href="#how-we-do-it">
+                    <div class="nav-icon"></div>
+                    <span class="nav-text">Our<br>projects</span>
+                </a>
+                <a href="#why-we-do-it">
+                    <div class="nav-icon"></div>
+                    <span class="nav-text">Our<br>mission</span>
+                </a>
+            </nav>
 
-                <nav id="home-nav">
-                    <a href="#who-we-are">
-                        <div class="nav-icon"></div>
-                        <span class="nav-text">Who<br>we are</span>
-                    </a>
-                    <a href="#what-we-do">
-                        <div class="nav-icon"></div>
-                        <span class="nav-text">Our<br>process</span>
-                    </a>
-                    <a href="#how-we-do-it">
-                        <div class="nav-icon"></div>
-                        <span class="nav-text">Our<br>projects</span>
-                    </a>
-                    <a href="#why-we-do-it">
-                        <div class="nav-icon"></div>
-                        <span class="nav-text">Our<br>mission</span>
-                    </a>
-                </nav>
+        </div>
 
-            </div>
+    </div> 
 
-        </div> 
-
-    </div>
+</div>
     
-    <div class="section stretch" id="who-we-are">
+<main>
+
+    <div class="section stretch">
 
         <a name="who-we-are"></a>
         
@@ -78,7 +78,7 @@ layout: parallax
 
     </div>
 
-    <div class="section stretch" id="what-we-do">
+    <div class="section stretch">
 
         <a name="what-we-do"></a>
         
@@ -88,17 +88,7 @@ layout: parallax
 
     </div>
 
-    <!--
-        <h3>Our goals</h3>
-        <ol>
-            <li><span class="goal">Establish</span> sustainable, mutually beneficial relationships</li>
-            <li><span class="goal">Achieve</span> the most economical costs for services</li>
-            <li><span class="goal">Provide</span> great quality, service, and expertise to our clients</li>
-            <li><span class="goal">Protect</span> the environment</li>
-        </ol>
-    -->
-
-    <div class="section stretch" id="how-we-do-it">
+    <div class="section stretch">
 
         <a name="how-we-do-it"></a>
         
@@ -108,7 +98,7 @@ layout: parallax
 
     </div>
 
-    <div class="section stretch" id="why-we-do-it">
+    <div class="section stretch">
 
         <a name="why-we-do-it"></a>
 
@@ -124,7 +114,7 @@ layout: parallax
 
             <div id="contact-background"></div>
 
-            <div class="section" id="contact">
+            <div class="section" id="contact-info">
                 
                 <h2>Contact</h2>
 
@@ -136,4 +126,4 @@ layout: parallax
 
     </div>
 
-</article>
+</main>
