@@ -141,6 +141,16 @@ layout: parallax
 
     </div>
 
+    <div class="section stretch" id="call-to-action">
+
+        <h2>Get Involved</h2>
+        
+            {% include button.html text="Work With Us" link="#contact" %}
+
+            {% include button.html text="Careers" link="/careers" %}
+
+    </div>
+
     <div class="parallax-container">
 
         <div class="parallax-group">
@@ -148,7 +158,9 @@ layout: parallax
             <div id="contact-background"></div>
 
             <div class="section" id="contact-info">
-                
+
+                <a name="contact"></a>
+
                 <h2>Contact</h2>
 
                 {{ contact | markdownify }}

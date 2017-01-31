@@ -110,6 +110,18 @@ main > div {
     color: white;
 }
 
+#call-to-action {
+    text-align: center;
+
+    h2 {
+        border: none;
+    }
+
+    .button {
+        display: inline-block;
+    }
+}
+
 #contact-background {
     @include parallax(-100);
     @include background-image($image: $contact-background, $y: bottom);
