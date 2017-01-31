@@ -15,9 +15,10 @@
 $base-font-family: 'Open Sans', sans-serif;
 $heading-font-family: 'Raleway', sans-serif;
 $title-font-family: 'Lora', serif;
-$menu-font-family: 'Open Sans Condensed', sans-serif;
+$header-font-family: 'Open Sans Condensed', sans-serif;
+$nav-font-family: 'Quicksand', sans-serif;
 
-$base-font-size:   1.5em;
+$base-font-size:   1.2em;
 $base-font-weight: 400;
 $base-line-height: 1.35;
 
@@ -28,7 +29,7 @@ $tagline-size:     1.58em;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
+$text-color:       #333;
 $background-color: #fdfdfd;
 $link-color:       #2a7ae2;
 
@@ -36,7 +37,7 @@ $header-color:          #000;
 $header-text-color:     #fff;
 $header-height:         62px;
 
-$footer-color:          rgba(0, 0, 0, 0.75);
+$footer-color:          rgba(0, 0, 0, 0.5);
 $footer-text-color:     #fff;
 $footer-height:         200px;
 
@@ -48,14 +49,16 @@ $border-color:       #222;
 $border-color-light: lighten($border-color, 15%);
 $border-color-dark:  #1d1d1d;
 
-$icon-green:       #9dcd58;
+$brand-color:       #9dcd58;
 $sky-blue:         #90c3d4;
+$div-color-1:      white;
+$div-color-2:      ghostwhite;
 
 // Images
-$splash-background:     url({{ site.baseurl | append: '/images/backgrounds/vector-black.jpeg' }});
+$splash-background:     url({{ site.baseurl | append: '/images/ben/ps/panels-05.jpg' }});
 $home-nav-icon:    url({{ site.baseurl | append: '/images/icons/white-sun.png' }});
 $blackstone-background: url({{ site.baseurl | append: '/images/backgrounds/vector-boxes.png' }});
-$atmosphere-background: url({{ site.baseurl | append: '/images/backgrounds/earth-space.jpg' }});
+$contact-background: url({{ site.baseurl | append: '/images/klein/klein-08.jpg' }});
 
 // Icons
 $who-icon:         url({{ site.baseurl | append: '/images/icons/who-we-are-inverted.png'}});
@@ -66,7 +69,7 @@ $why-icon:         url({{ site.baseurl | append: '/images/icons/why-we-do-it-inv
 // Home Nav
 $home-nav-size:    525px;
 $nav-icon-size:    115px;
-$nav-text-size:    1.5em;
+$nav-text-size:    1.6em;
 
 $top:              0.3087, 0.0381;
 $bottom:           0.0381, 0.3087;
@@ -75,7 +78,9 @@ $bottom:           0.0381, 0.3087;
 $perspective:      100;
 
 // Width of the content area
-$content-width:    800px;
+$content-max:    1280px;
+$content-mid:    1000px;
+$content-min:    800px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -103,13 +108,17 @@ $on-laptop:        800px;
     for the layer to always fill the width of its parent parallax-group
 */
 
-@mixin parallax ($depth: 0) {
+@mixin parallax ($depth: 0, $background: true) {
     $scale: calc(1 - #{$depth} / #{$perspective});
     $height-adjust: calc((1 - (1 / #{$scale})) * (100vh - 100%) / -2);
     position: absolute;
     top: $height-adjust; bottom: $height-adjust; left: 0; right: 0;
     -webkit-transform: translateZ($depth * 1px) scale($scale);
     transform: translateZ($depth * 1px) scale($scale);
+
+    @if $background {
+        @extend .unwrap;
+    }
 }
 
 // settings for left-side nav-icons
@@ -117,9 +126,11 @@ $on-laptop:        800px;
     top: nth($which, 2) * $home-nav-size * $scale;
     left: nth($which, 1) * $home-nav-size * $scale;
     transform: translate(calc(-100% + (#{$nav-icon-size} / 2 * #{$scale})), -50%);
+    text-align: right;
     .nav-icon {
         float: right;
         margin-left: $spacing-unit / 2 * $scale;
+        animation-name: rotate-left;
     }
 }
 
@@ -131,6 +142,7 @@ $on-laptop:        800px;
     .nav-icon {
         float: left;
         margin-right: $spacing-unit / 2 * $scale;
+        animation-name: rotate-right;
     }
 }
 
@@ -162,6 +174,7 @@ $on-laptop:        800px;
         a {
             position: absolute;
             display: block;
+            height: $nav-icon-size * $scale;
 
             transition: inherit;
             animation-name: fade-in;
@@ -170,6 +183,38 @@ $on-laptop:        800px;
 
             &:hover {
                 text-decoration: none;
+            }
+
+            &:nth-child(1) {
+                @include nav-left($bottom, $scale);
+                animation-delay: $main-dur;
+                .nav-icon {
+                    @include background-image($who-icon);
+                }
+            }
+
+            &:nth-child(2) {
+                @include nav-left($top, $scale);
+                animation-delay: $main-dur + 0.1s;
+                .nav-icon {
+                    @include background-image($what-icon);
+                }
+            }
+
+            &:nth-child(3) {
+                @include nav-right($top, $scale);
+                animation-delay: $main-dur + 0.2s;
+                .nav-icon {
+                    @include background-image($how-icon);
+                }
+            }
+
+            &:nth-child(4) {
+                @include nav-right($bottom, $scale);
+                animation-delay: $main-dur + 0.3s;
+                .nav-icon {
+                    @include background-image($why-icon);
+                }
             }
         }
 
@@ -192,52 +237,17 @@ $on-laptop:        800px;
 
     .nav-text {
         @if $text {
-            display: inline;
+            display: inline-block;
         } @else {
             display: none;
         }
+        transform: translateY(calc(((#{$nav-icon-size} / 2) - 50%) * #{$scale}));
         color: white;
-        font-family: $menu-font-family;
+        font-family: $nav-font-family;
         font-size: $nav-text-size * $scale;
         text-transform: capitalize;
-        line-height: $nav-icon-size * $scale;
+        line-height: 1.1;
         transition: inherit;
-    }
-
-    #nav-who {
-        @include nav-left($bottom, $scale);
-        animation-delay: $main-dur;
-        .nav-icon {
-            @include background-image($who-icon);
-            animation-name: rotate-left;
-        }
-    }
-
-    #nav-what {
-        @include nav-left($top, $scale);
-        animation-delay: $main-dur + 0.1s;
-        .nav-icon {
-            @include background-image($what-icon);
-            animation-name: rotate-left;
-        }
-    }
-
-    #nav-how {
-        @include nav-right($top, $scale);
-        animation-delay: $main-dur + 0.2s;
-        .nav-icon {
-            @include background-image($how-icon);
-            animation-name: rotate-right;
-        }
-    }
-
-    #nav-why {
-        @include nav-right($bottom, $scale);
-        animation-delay: $main-dur + 0.3s;
-        .nav-icon {
-            @include background-image($why-icon);
-            animation-name: rotate-right;
-        }
     }
 }
 

@@ -21,17 +21,17 @@
     @include parallax(-100);
 }
 
-@include home-nav($scale: 1.5);
+@include home-nav($scale: 1.25);
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: $content-max) {
     @include home-nav($scale: 1);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: $content-mid) {
     @include home-nav($scale: 0.82);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: $content-min) {
     @include home-nav($scale: 0.82, $text: false);
 }
 
@@ -73,18 +73,24 @@
     }
 }
 
+main > div {
+    background-color: $div-color-1;
+    &:nth-child(2n) {
+        background-color: $div-color-2;
+    }
+}
+
 .section {
     padding-top: $spacing-unit;
     padding-bottom: $spacing-unit;
     z-index: 1;
-    color: white;
 
     h2 {
         font-size: 2em;
         line-height: 1;
         text-transform: capitalize;
         text-decoration: none;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid $text-color;
     }
 
     h3 {
@@ -95,28 +101,44 @@
     }
 }
 
-#who-we-are {
-    background-color: $icon-green;
-}
-
 #blackstone-background {
     @include parallax(-100);
     @include background-image($blackstone-background);
 }
 
-#what-we-do {
-    background-color: $sky-blue;
+#blackstone {
+    color: white;
 }
 
-#how-we-do-it {
-    background-color: $icon-green;
+#call-to-action {
+    text-align: center;
+
+    h2 {
+        border: none;
+    }
+
+    .button {
+        display: inline-block;
+    }
 }
 
-#why-we-do-it {
-    padding-bottom: $footer-height + ($spacing-unit * 4);
+#contact-background {
+    @include parallax(-100);
+    @include background-image($image: $contact-background, $y: bottom);
 }
 
-#why-background {
-    @include parallax(-50);
-    @include background-image($image: $atmosphere-background, $y: top);
+#contact-info {
+    min-height: calc(100vh - #{$header-height});
+    padding-bottom: $footer-height;
+    max-width: 300px;
+    color: white;
+    line-height: 1.5;
+    h2 {
+        margin-top: $spacing-unit;
+        border-color: white;
+    }
+    p {
+        display: inline-block;
+        margin-bottom: 2em;
+    }
 }

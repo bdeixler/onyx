@@ -1,63 +1,81 @@
 ---
 layout: parallax
 ---
-<article>
+{% capture gibberish %}{% include lorem-ipsum.md %}{% endcapture %}
+{% capture who %}{% include _home/who-we-are.md %}{% endcapture %}
+{% capture what %}{% include _home/what-we-do.md %}{% endcapture %}
+{% capture how %}{% include _home/how-we-do-it.md %}{% endcapture %}
+{% capture why %}{% include _home/green-pitch.md %}{% endcapture %}
+{% capture blackstone %}{% include _home/blackstone.md %}{% endcapture %}
+{% capture contact %}{% include _contact/general.md %}{% endcapture %}
 
-    {% capture gibberish %}{% include lorem-ipsum.md %}{% endcapture %}
-    {% capture who %}{% include _home/who-we-are.md %}{% endcapture %}
-    {% capture what %}{% include _home/what-we-do.md %}{% endcapture %}
-    {% capture how %}{% include _home/how-we-do-it.md %}{% endcapture %}
-    {% capture why %}{% include _home/green-pitch.md %}{% endcapture %}
-    {% capture blackstone %}{% include _home/blackstone.md %}{% endcapture %}
+<div class="parallax-container">
 
-    <div class="parallax-container">
+    <div class="parallax-group" id="splash">
 
-        <div class="parallax-group" id="splash">
+        <div id="splash-background"></div>
 
-            <div id="splash-background"></div>
+        <div id="splash-content">
 
-            <div class="wrapper" id="splash-content">
+            <h1 class="site-title">{{ site.title }}</h1>
 
-                <h1 class="site-title">{{ site.title }}</h1>
+            <p class="site-description">{{ site.description }}</p>
 
-                <p class="site-description">{{ site.description }}</p>
+            <nav id="home-nav">
+                <a href="#who-we-are">
+                    <div class="nav-icon"></div>
+                    <span class="nav-text">Who<br>we are</span>
+                </a>
+                <a href="#what-we-do">
+                    <div class="nav-icon"></div>
+                    <span class="nav-text">Our<br>process</span>
+                </a>
+                <a href="#how-we-do-it">
+                    <div class="nav-icon"></div>
+                    <span class="nav-text">Our<br>projects</span>
+                </a>
+                <a href="#why-we-do-it">
+                    <div class="nav-icon"></div>
+                    <span class="nav-text">Our<br>mission</span>
+                </a>
+            </nav>
 
-                <nav id="home-nav">
-                    <a id="nav-who" href="#who-we-are">
-                        <div class="nav-icon"></div>
-                        <span class="nav-text">Who we are</span>
-                    </a>
-                    <a id="nav-what" href="#what-we-do">
-                        <div class="nav-icon"></div>
-                        <span class="nav-text">What we do</span>
-                    </a>
-                    <a id="nav-how" href="#how-we-do-it">
-                        <div class="nav-icon"></div>
-                        <span class="nav-text">How we do it</span>
-                    </a>
-                    <a id="nav-why" href="#why-we-do-it">
-                        <div class="nav-icon"></div>
-                        <span class="nav-text">Why we do it</span>
-                    </a>
-                </nav>
-
-            </div>
-
-        </div> 
+        </div>
 
     </div>
-    
-    <div class="section stretch" id="who-we-are">
+
+</div>
+
+<main>
+
+    <div class="section stretch">
 
         <a name="who-we-are"></a>
-        
+
         <h2>Who we are</h2>
 
-        {{ who | markdownify }}
+        <p>Onyx is a renewable energy development company established by funds through Blackstone Energy Partners. We deliver best-in-class solar systems to a wide range of clients in the commercial and industrial sectors, from public and private businesses to NGOs, non profits, government municipalities, and school districts.</p>
 
-        <!--{{ gibberish | truncate: 1000 | markdownify }}-->
+        <h3>Our Goals</h3>
+
+        <ul>
+            <li>Promote relationships that lead to sustainable benefits for both parties.</li>
+            <li>Produce the most economical costs for services.</li>
+            <li>Provide our clients with quality, service, and expertise.</li>
+            <li>Protect the environment.</li>
+        </ul>
+
+        <h3>A Record of Success</h3>
+
+        <p>Our team brings over 250 years of collective industry experience, with more than 1GW of renewable projects developed across the United States. Members of our team have held leadership positions with Solops and managed projects for multiple Fortune 500 companies.</p>
+
+        <h3>Unparalleled Financial Backing</h3>
+
+        <p>We have secured committed sponsor equity from Blackstone and $300MM in tax equity from Credit Suisse. This foundation allows us to pursue projects freely and see them through to completion.</p>
 
     </div>
+
+
 
     <div class="parallax-container">
 
@@ -65,11 +83,11 @@ layout: parallax
 
             <div id="blackstone-background"></div>
 
-            <div class="section wrapper">
+            <div class="section" id="blackstone">
 
                 <h3>Our partnership with Blackstone</h3>
 
-                {{ blackstone | markdownify }}
+                <p>In October 2014, Blackstone announced it would back a highly experienced management team, creating Onyx Renewable Partners.  Blackstone is a leading financial institution in the private investment sector with a long history of backing power development teams.  Onyx is Blackstone's 9th portfolio management team and 3rd management team focused on power.</p>
 
             </div>
 
@@ -77,49 +95,75 @@ layout: parallax
 
     </div>
 
-    <div class="section stretch" id="what-we-do">
+    <div class="section stretch">
 
         <a name="what-we-do"></a>
-        
-        <h2>What we do</h2>
 
-        {{ what | markdownify }}
+        <h2>Our Process</h2>
+
+        <p>We oversee every stage of each solar project, from development and engineering to construction and management. Our <em>turnkey approach</em> ensures ensures optimal execution and high-quality control standards, accelerates time from development to operation and guarantees extensive experience at every stage of solar installation.</p>
+
+        <h3>Financing</h3>
+
+        <p>With committed tax equity from the world’s leading investment banks, there is no need for additional funding. We offer flexible financing solutions...</p>
+
+        <h3>Development & Engineering</h3>
+
+        <p>We boast full project management, development, and engineering capabilities. Our internal team of engineering experts work with customers, the utility, and construction to prepare the optimal system.</p>
+
+        <h3>Construction</h3>
+
+        <p>Our national network of subcontractors and suppliers ensures complete construction capabilities.</p>
+
+        <h3>Operation & Management</h3>
+
+        <p>With full asset management and O&M services, we deliver maximum production and asset durability.</p>
 
     </div>
 
-    <!--
-        <h3>Our goals</h3>
-        <ol>
-            <li><span class="goal">Establish</span> sustainable, mutually beneficial relationships</li>
-            <li><span class="goal">Achieve</span> the most economical costs for services</li>
-            <li><span class="goal">Provide</span> great quality, service, and expertise to our clients</li>
-            <li><span class="goal">Protect</span> the environment</li>
-        </ol>
-    -->
-
-    <div class="section stretch" id="how-we-do-it">
+    <div class="section stretch">
 
         <a name="how-we-do-it"></a>
-        
-        <h2>How we do it</h2>
 
-        {{ how | markdownify }}
+        <h2>Our Projects</h2>
+
+        <p>We have already brought renewable energy to over half the country and are actively pursuing future development in the US and Canada.</p>
+
+    </div>
+
+    <div class="section stretch">
+
+        <a name="why-we-do-it"></a>
+
+        <h2>Why we do it</h2>
+
+        <p>With the global demand for energy expected to double within the next few decades as the planet undergoes climate change, the need for sustainable energy has never been more pressing. Recent advances in renewable technology have allowed us to produce and provide cost-effective energy while minimizing our carbon footprint. Solar and wind power are more accessible and efficient than ever before. It is time to invest in our future.</p>
+
+    </div>
+
+    <div class="section stretch" id="call-to-action">
+
+        <h2>Get Involved</h2>
+        
+            {% include button.html text="Work With Us" link="#contact" %}
+
+            {% include button.html text="Careers" link="/careers" %}
 
     </div>
 
     <div class="parallax-container">
 
-        <div class="parallax-group" id="why-we-do-it">
+        <div class="parallax-group">
 
-            <div id="why-background"></div>
+            <div id="contact-background"></div>
 
-            <div class="section wrapper">
+            <div class="section" id="contact-info">
 
-                <a name="why-we-do-it"></a>
-                
-                <h2>Why we do it</h2>
+                <a name="contact"></a>
 
-                {{ why | markdownify }}
+                <h2>Contact</h2>
+
+                {{ contact | markdownify }}
 
             </div>
 
@@ -127,4 +171,4 @@ layout: parallax
 
     </div>
 
-</article>
+</main>
