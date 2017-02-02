@@ -11,7 +11,7 @@
     z-index: -2;
     background-color: #000;
     @include parallax(-200);
-    @include background-image($splash-background);
+    @include background-image($splash-background, $y: top);
 }
 
 #splash-content {
