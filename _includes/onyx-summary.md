@@ -1,1 +1,0 @@
-Onyx Renewable Partners L.P. ("Onyx"), a Blackstone portfolio company, provides flexible, creative solutions for the development, financing, construction, and operation of commercial & industrial distributed generation and utility-scale solar power generation sites as well as wind power projects in North America.  
