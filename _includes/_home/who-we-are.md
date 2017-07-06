@@ -1,1 +1,0 @@
-Onyx is a renewable energy development company established by funds through [Blackstone Energy Partners](https://www.blackstone.com/). We deliver best-in-class solar systems by providing deep project level oversight while harnessing local knowledge and expertise.
